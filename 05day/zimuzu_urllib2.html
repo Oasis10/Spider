@@ -1,0 +1,970 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="http://js.zmzjstu.com/style/layout.css" rel="stylesheet" type="text/css" />
+<link href="http://js.zmzjstu.com/style/index.css" rel="stylesheet" type="text/css" />
+<script src="http://js.zmzjstu.com/js/jquery-1.7.1.min.js" charset="utf-8"></script>
+<script src="http://js.zmzjstu.com/js/global.js?v=20160922" charset="utf-8"></script>
+<title>人人影视,字幕组下载站|为您翻译最新最快的海外影视剧,ZiMuZu.tv</title>
+<meta name="keywords" content="YYeTs,人人影视,字幕组,字幕组APP,美剧下载,字幕下载,日剧下载,高清电影下载,韩剧下载,美剧时间表,字幕组,ZiMuZu">
+<meta name="description" content="字幕组网站是由爱好者成员成立的网站，继续为您翻译最新最快的海外影视剧字幕,美剧,日剧,电影最新字幕下载">
+</head>
+<body>
+<script>
+var uri = document.location.href.toLowerCase();
+var na = ['/release/','/user/reg','/work/'];
+var na_ga = [];
+
+function is_a(){
+for(var i in na)
+    if(uri.indexOf(na[i])>=0) return false;
+return true;
+}
+
+function is_ga_a(){
+var t = na.concat(na_ga);
+for(var i in t)
+    if(uri.indexOf(t[i])>=0) return false;
+return true;
+}
+</script>
+
+<div id="floatAD_l" class="couplet couplet_l" style="width:160px;">
+<script type="text/javascript">
+if(is_a())
+{
+    var cpro_id = "u2963755";
+    document.write('<script type="text/javascript" src="http://cpro.baidustatic.com/cpro/ui/c.js"><\/script>');
+}
+</script>
+</div>
+
+<div id="floatAD_r" class="couplet couplet_l" style="width:160px;">
+<!-- 
+<script type="text/javascript">
+if(is_ga_a()) document.write('<script src="http://g.ousns.net/ga-160-right.js?321" type="text/javascript"><\/script>');
+</script>
+-->
+</div>
+
+<style> .couplet{position:fixed;z-index:99999;} </style>
+
+<script type="text/javascript">
+if(is_ga_a()) {
+    var min_w = 1330;
+    GLOBAL.JQUERY.FloatAD(null,null,null,35);
+    if($(window).width()<min_w){
+        $('#floatAD_l').hide();
+        $('#floatAD_r').hide();
+        $('#floatAD_l').remove();
+        $('#floatAD_r').remove();
+    }
+    $(document).ready(function(){
+        if($(window).width()<min_w){
+            $('#floatAD_l').hide();
+	    $('#floatAD_r').hide();
+	    $('#floatAD_l').remove();
+	    $('#floatAD_r').remove();
+        }
+        $(window).trigger('resize');
+    });
+} else {
+    $('#floatAD_l').hide();
+    $('#floatAD_r').hide();
+    $('#floatAD_l').remove();
+    $('#floatAD_r').remove();
+}
+</script>
+
+<script type="text/javascript">
+/*
+if(is_a()){
+	document.write('<a style="display:none!important" id="tanx-a-mm_111117185_10092486_33642254"></a>');
+	tanx_s = document.createElement("script");
+	tanx_s.type = "text/javascript";
+	tanx_s.charset = "gbk";
+	tanx_s.id = "tanx-s-mm_111117185_10092486_33642254";
+	tanx_s.async = true;
+	tanx_s.src = "http://p.tanx.com/ex?i=mm_111117185_10092486_33642254";
+	tanx_h = document.getElementsByTagName("head")[0];
+	if(tanx_h)tanx_h.insertBefore(tanx_s,tanx_h.firstChild);
+}
+*/
+</script>
+
+<script type="text/javascript">
+/*
+//rich
+//if(!GLOBAL.AdUtils.is_inside_man() && is_a())
+if(is_a())
+{
+    var ads = new Array();
+    ads.push('<script charset="gbk" src="http://p.tanx.com/ex?i=mm_111117185_10092486_33642254"><\/script>');
+    ads.push('<script charset="gbk" src="http://p.tanx.com/ex?i=mm_111117185_10092486_33642254"><\/script>');
+    ads.push('<script charset="gbk" src="http://p.tanx.com/ex?i=mm_111117185_10092486_33642254"><\/script>');
+    ads.push('<script type="text/javascript" src="http://g.ousns.net/rich-300.js?123"><\/script>');
+    GLOBAL.AdUtils.rich(ads, 'zmz_rich');
+}
+*/
+</script>
+
+<div class="top-box">
+    <div class="header">
+  <div class="w">
+      <h1 class="fl"><a href="/" class="w_index"><img id="logo"></a></h1>
+      <form name="search" action="/search/index" method="get" class="fl corner search-box">
+          <input type="text"  size="20" class="keywords" name="keyword" autocomplete='off' placeholder="請輸入搜尋關鍵詞" />
+          <input type="submit" class="submit">
+          <div class="search-list" style="display:none;"></div>
+          <ul id="top_search_list" style="display:none;"></ul>
+          <input type="hidden" name="search_type" id="search_type" value="">
+      </form>
+      <span style="position: relative; font-size: 16px; font-weight: bold; left: 20px; top: 15px;"><a href="http://app.zimuzu.tv" target="_blank" style="color:#fff">手机APP客户端</a></span>
+       <div class="fr top-login">
+        <!-- 未登录 -->
+        <div class="top-login-before" style="display:none;"><div class="u"><em class="ico user-ico"></em><a href="/user/login">登入</a>/ <a href="/user/reg">註冊</a></div></div>
+        <!-- 未登录 -->
+        <!-- 已登录 -->
+        <div class="top-login-after" style="display:none;">
+          <div class="fl u">
+          </div>
+          <div class="fl e top_msg">
+            <em class="corner" style="display:none;"></em>
+            <div class="user-pop p-email">
+                <div class="user-pop-con corner">
+                    <span class="ar"></span>
+                      <ul>
+                        <li class="message"><a href='/user/message'><span>私信</span></a><strong class="corner"></strong></li>
+                        <!-- <li><span>评论回复</span><strong class="corner">10</strong></li> -->
+                        <!-- <li><span>好友动态</span><strong class="corner">10</strong></li> -->
+                        <!-- <li class="help"><span>求档回复</span><strong class="corner"></strong></li> -->
+                        <!-- <li><span>好友申请</span><strong class="corner">10</strong></li> -->
+                        <li class="sys_message" style="margin-bottom: 10px;"><a href="/user/sysmessage"><span>系统通知</span></a><strong class="corner"></strong></li>
+                        <!-- <li class="link tc"><a href="javascript:;" class="corner">忽略以上提醒</a></li> -->
+                      </ul>
+                  </div>
+              </div>
+          </div>
+          <div class="fr fb">
+            我要发布<em></em>
+            <div class="user-pop p-release">
+                <div class="user-pop-con corner">
+                    <span class="ar"></span>
+                      <ul id="post_List">
+                      </ul>
+                  </div>
+              </div>
+          </div>
+        </div>
+        <!-- 已登录 -->
+       </div>
+  </div>
+</div>
+
+<div class="notice">
+  <div class="w">
+    <p><strong class="f0">网站公告：</strong> <a target="_blank"><span></span></a></p>
+    <a class="close">x</a>
+  </div>
+</div>
+
+<style>
+.signin-tips{ border-radius:5px; border:1px solid #a6884c; background:#fab639; color:#fff; width:436px; height:95px; box-shadow:3px 3px 0 rgba(0,0,0,.3);z-index: 999;}
+.signin-tips .fl{ font-size:60px; font-weight:bold; width:40%; text-align:center; margin-top:36px; text-shadow:1px 1px 0 #333;}
+.signin-tips .fr{ width:60%; font-size:17px; line-height:150%; margin-top:17px; text-shadow:1px 1px 0 #666;}
+.signin-tips .fr b{ font-size:25px;}
+</style>
+<script>
+$('#logo').attr('src',GLOBAL.CONST.RES_URL+'images/logo.png');
+GLOBAL.JQUERY.SEARCHTIPS(250,function(){$('.search-list').hide()});
+
+$.getJSON(GLOBAL.CONST.WWW_URL+'public/hotkeyword',function(R){
+  var data = R.data;
+  var html = '<li><a href="http://www.6.cn/coop/pub/?src=yyetst" target="_blank" rel="nofollow"><span style="color:#ED8600">1</span>美女在线视频</a></li>\
+';
+  for(key in data){
+    key = parseInt(key);
+    if (typeof data[key].keyword !== 'undefined') html += '<li><a href="/search?keyword='+encodeURIComponent(data[key].keyword)+'"><span class="corner50">'+(key+1)+'</span>'+data[key].keyword+'</a></li>';
+  }
+  $('.search-list').html('<ul class="corner box key-result">'+html+'</ul>');
+});
+
+var navbar_a,navbar_b,xianliao;
+$.ajax({
+  url: '/user/login/getCurUserTopInfo',
+  async: false, 
+  dataType: "json",
+  success: function(R){
+    xianliao = R.data.xianliao;
+    GLOBAL.InitTopUserInfo(R.data,R.status);
+  }
+});
+
+
+$(document).ready(function(){
+  $('.top-login-after .fb').mouseover(function(){
+    $(this).addClass('fb-selected');
+  }).mouseout(function(){
+    $(this).removeClass('fb-selected');
+  })
+  $('#logout').click(function(){
+    GLOBAL.Loading();
+    $.getJSON('/user/logout/ajaxLogout',function(data){
+      if(data.status==1){
+        window.history.go(0);
+      }
+      GLOBAL.Loading('hide');
+    });
+    return false;
+  });
+});
+</script>    
+    <div style="text-align:center; margin:10px 0 15px 0;">
+<script type="text/javascript">
+//if(is_ga_a()) document.write('<script src="http://g.ousns.net/ga-728-t.js?232" type="text/javascript"><\/script>');
+//tb-ssp-728-top
+if(typeof(is_ga_a)!='undefined' && is_ga_a())
+	document.write('<script charset="gbk" src="http://p.tanx.com/ex?i=mm_111117185_10092486_48076988"><\/script>');
+</script>
+</div>
+
+    <div class="menu-box">
+  <ul class="w">
+    <li><a href="/" class="w_index">首页</a></li>
+    <li channel="article"><a href="/article">资讯</a></li>
+    <li channel="subtitle"><a href="/subtitle">字幕下载</a></li>
+    <li channel="resource"><a href="/resourcelist">影视库</a></li>
+    <li channel='top'><a href="/html/top/week.html">排行榜</a></li>
+    <li channel="today"><a href="/today">今日更新</a></li>
+    <li channel='schedule'><a href="/tv/schedule">播出表</a></li>
+    <li channel="help"><a href="/help">互助求档</a></li>
+    <li><a href="https://www.6.cn/coop/pub/?src=yyetst" target="_blank" rel="nofollow">美女视频</a></li>
+    <li><a href="/Announcement">加入字幕组</a></li>
+  </ul>
+</div>
+<script type="text/javascript">
+$('.w_index').attr('href','/?_='+Math.random(4));
+
+$(document).ready(function(){
+  if(navbar_a) $('.menu-box li:first').after(navbar_a);
+  if(navbar_b) $('.menu-box li:last').after(navbar_b);
+  var matches = window.location.href.match(/http:\/\/[^/]+(\/.*)/);
+  var group_name = matches==null?'':matches[1].replace(/\/{2,}/m,'/');
+  var groups = {'article':'^/article','fav':'^/user/fav','subtitle':'^/[a-z]?subtitle','resource':'^/[a-z]?resourcelist|/[a-z]?resource/','schedule':'^/tv/schedule|/html/return|/html/new','today':'^/today','help':'^/help','top':'^/html/top/'};
+  for(key in groups)
+  {
+    regx = new RegExp(groups[key],'i');
+    if(group_name.search(regx)!=-1)
+    {
+      $('.menu-box li[channel='+key+'] a').addClass('cur');
+      return true;
+    }
+  }
+  $('.menu-box li:first a').addClass('cur');
+});
+</script>
+<div style="text-align:center; margin:0 0 15px 0;">
+<script type="text/javascript">
+//if(is_ga_a()) document.write('<script src="http://g.ousns.net/ga-728-t.js?232" type="text/javascript"><\/script>');
+//tb-ssp-728-top2
+if(typeof(is_ga_a)!='undefined' && is_ga_a()) document.write('<script charset="gbk" src="http://p.tanx.com/ex?i=mm_111117185_10092486_48076989"><\/script>');
+</script>
+</div>
+
+</div>
+
+<div class="middle-box">
+        <div class="w">
+            <div class="fl box top24">
+                <h2 class="it">24小时下载热门</h2>
+                <div class="box clearfix">
+                    <ul>
+                    <li class="top">
+                      <span>1</span>
+                      <div class="fl-img">
+                        <a href="/resource/35357" title="血路狂飙"><img src="http://tu.zmzjstu.com/ftp/2017/0614/s_ef0aa315aebc8546c612a0a45ea43409.jpg" /></a>
+                      </div>
+                      <div class="fl-info">
+                        <a href="/resource/35357">血路狂飙</a>
+                          <p>美剧</p>
+                          <p>2017</p>
+                      </div>
+                    </li>
+                                        <li><em>美剧</em><span>2</span><a href="/resource/30417" title="始祖家族">始祖家族</a></li>                    <li><em>日剧</em><span>3</span><a href="/resource/35290" title="我是你的命中注定。">我是你的命中注定。</a></li>                    <li><em>美剧</em><span>4</span><a href="/resource/35099" title="美国众神">美国众神</a></li>                    <li><em>美剧</em><span>5</span><a href="/resource/33554" title="黑暗物质">黑暗物质</a></li>                    <li><em>电影</em><span>6</span><a href="/resource/35393" title="恐龙战队">恐龙战队</a></li>                    <li><em>美剧</em><span>7</span><a href="/resource/30325" title="女子监狱">女子监狱</a></li>                    <li><em>电影</em><span>8</span><a href="/resource/35399" title="嗜血战神">嗜血战神</a></li>                    <li><em>电影</em><span>9</span><a href="/resource/35313" title="格雷的五十道阴影：束缚">格雷的五十道阴影：束缚</a></li>                    <li><em>西剧</em><span>10</span><a href="/resource/34729" title="时间管理局 (ZiMuZu版)">时间管理局 (ZiMuZu版)</a></li>                    <li><em>日剧</em><span>11</span><a href="/resource/35288" title="人100％靠外表">人100％靠外表</a></li>                    </ul>
+                </div>
+            </div>
+            
+            <div id="focus" class="fl box">
+                <ul id="tabs">
+                 <li><a>1</a></li><li><a>2</a></li><li><a>3</a></li><li><a>4</a></li><li><a>5</a></li>                </ul>
+                <ul id="output">
+                 <li>
+                      <a href="http://www.zimuzu.tv/public/focusurl/1237" target="_blank"><img src="http://tu.zmzjstu.com/ftp/2017/0502/b507b80c4f92996cce9dd387bdfcbec7.jpg" /></a>
+                      <h2>人人必备的翻墙神器 </h2>
+                  </li><li>
+                      <a href="http://www.zimuzu.tv/gresource/33697" target="_blank"><img src="http://tu.zmzjstu.com/ftp/2017/0614/27d0d6dcbc192e241f9b780ac5b53b8d.jpg" /></a>
+                      <h2>《行尸之惧》第3季</h2>
+                  </li><li>
+                      <a href="http://www.zimuzu.tv/gresource/30325" target="_blank"><img src="http://tu.zmzjstu.com/ftp/2017/0614/0cd47cda4c51f51c396c67bba3b5b0b0.jpg" /></a>
+                      <h2>《女子监狱》第5季</h2>
+                  </li><li>
+                      <a href="http://www.zimuzu.tv/gresource/34729" target="_blank"><img src="http://tu.zmzjstu.com/ftp/2017/0614/f8390fd351a124766aa29a4c462a54ae.jpg" /></a>
+                      <h2>【西剧】《时间管理局》第3季</h2>
+                  </li><li>
+                      <a href="http://www.zimuzu.tv/gresource/33301" target="_blank"><img src="http://tu.zmzjstu.com/ftp/2017/0614/b6564035aa9fbd9f1fd16914dc921710.jpg" /></a>
+                      <h2>《波达克》第3季</h2>
+                  </li>                </ul>
+            </div>
+            
+            <div class="fr today-play">
+              <h2 class="it">今日播出 2017-06-18 周日<a href="/tv/schedule">更多</a></h2>
+                <div class="box list">
+                  <ul>
+                    <li><a href="/resource/26326" target="_blank" title="神秘博士Doctor Who"><strong>神秘博士</strong> Doctor Who S10E10</a></li><li><a href="/resource/29625" target="_blank" title="黑色孤儿Orphan Black "><strong>黑色孤儿</strong> Orphan Black  S05E02</a></li><li><a href="/resource/32010" target="_blank" title="逆转奇兵Turn"><strong>逆转奇兵</strong> Turn S04E01</a></li><li><a href="/resource/32010" target="_blank" title="逆转奇兵Turn"><strong>逆转奇兵</strong> Turn S04E02</a></li>                  </ul>
+                    <a class="ar left">&lt;</a><a class="ar right">&gt;</a>
+                </div>
+                <ul class="box jobs-hr">
+                  <li><a href="http://app.zimuzu.tv/" target="_blank"><img src="http://js.zmzjstu.com/pic/1.png"></a><br><a href="http://app.zimuzu.tv/" target="_blank">手机客户端</a></li>
+                    <li><a href="http://weibo.com/zimuzu2015" target="_blank"><img src="http://js.zmzjstu.com/pic/2.png"></a><br><a href="http://weibo.com/zimuzu2015" target="_blank">官方微博</a></li>
+                    <li><a href="/announcement/60" target="_blank"><img src="http://js.zmzjstu.com/pic/3.png"></a><br><a href="/announcement/60" target="_blank">官方微信</a></li>
+                    <li><a href="http://91dict.com/" target="_blank"><img src="http://js.zmzjstu.com/pic/4.png"></a><br><a href="http://91dict.com/" target="_blank">人人词典</a></li>
+                    <li><a href="http://www.rrliuxue.com/" target="_blank"><img src="http://js.zmzjstu.com/pic/5.png"></a><br><a href="http://www.rrliuxue.com/" target="_blank">人人留学</a></li>
+                    <li><a href="http://bbs.allyingshi.com/read.php?tid=4&fid=5" target="_blank"><img src="http://js.zmzjstu.com/pic/6.png"></a><br><a href="http://bbs.allyingshi.com/read.php?tid=4&fid=5" target="_blank">字幕制作工具</a></li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+                           
+
+            <div style="margin:15px 0 0 0;text-align:center;">
+<!-- tb-ssp-728-3 -->
+<script charset="gbk" src="http://p.tanx.com/ex?i=mm_111117185_10092486_48072963"></script>
+</div>
+    
+            <!--外部资源-->
+            <div class="box out-resource">
+                                 
+            </div>
+
+            <div class="fl box top-news">
+                <h2 class="it">新闻资讯</h2>
+                <ul>
+                <li class="clearfix">
+                  <div class="fl-img">
+                      <a href="/article/30202"><img src="http://tu.zmzjstu.com/ftp/2017/0618/s_aeafde7452fc0d762843b8fb8c5dc68e.jpg" /></a>
+                  </div>
+                  <div class="fl-tag">
+                    <a href="/article?type=m_review"><span class="tc corner tag2">影评</span></a>
+                  </div>
+                  <div class="fl-info">
+                      <h3><a href="/article/30202" title="父亲节电影专辑——好爸爸修炼指南（文/茜红柿）">父亲节电影专辑——好爸爸修炼指南（文/茜红柿）</a><span>-- 评电影 <a href="/resource/35347" class="f3">《摔跤吧！爸爸》</a></span></h3>
+                      <p class="f4"><a href="/user/2433247">独自哥哥</a> 发表于 2017-06-18 12:08 <font class="dateline" time="1497758883"></font></p>
+                  </div>
+                </li><li class="clearfix">
+                  <div class="fl-img">
+                      <a href="/article/30201"><img src="http://tu.zmzjstu.com/ftp/2017/0618/s_238c3f29b489cbc51b22b4dbd50bc5f8.jpg" /></a>
+                  </div>
+                  <div class="fl-tag">
+                    <a href="/article?type=m_review"><span class="tc corner tag2">影评</span></a>
+                  </div>
+                  <div class="fl-info">
+                      <h3><a href="/article/30201" title="《异形：契约》：天道有常，因果有报">《异形：契约》：天道有常，因果有报</a><span>-- 评电影 <a href="/resource/35386" class="f3">《异形：契约》</a></span></h3>
+                      <p class="f4"><a href="/user/3506440">地瓜</a> 发表于 2017-06-18 03:10 <font class="dateline" time="1497726641"></font></p>
+                  </div>
+                </li><li class="clearfix">
+                  <div class="fl-img">
+                      <a href="/article/30200"><img src="http://tu.zmzjstu.com/ftp/2017/0617/s_3efd757634f5e49efb9ca9092bdd1122.jpg" /></a>
+                  </div>
+                  <div class="fl-tag">
+                    <a href="/article?type=m_review"><span class="tc corner tag2">影评</span></a>
+                  </div>
+                  <div class="fl-info">
+                      <h3><a href="/article/30200" title="《异形：契约》：进取、圆滑、果敢 VS 知足、忠诚、仁慈">《异形：契约》：进取、圆滑、果敢 VS 知足、忠诚</a><span>-- 评电影 <a href="/resource/35386" class="f3">《异形：契约》</a></span></h3>
+                      <p class="f4"><a href="/user/3725338">opllx</a> 发表于 2017-06-17 14:23 <font class="dateline" time="1497680610"></font></p>
+                  </div>
+                </li><li class="clearfix">
+                  <div class="fl-img">
+                      <a href="/article/30199"><img src="http://tu.zmzjstu.com/ftp/2017/0616/s_7ffd19977a5c1e757e1f87c5935bf2bf.jpg" /></a>
+                  </div>
+                  <div class="fl-tag">
+                    <a href="/article?type=m_review"><span class="tc corner tag2">影评</span></a>
+                  </div>
+                  <div class="fl-info">
+                      <h3><a href="/article/30199" title="《迷失Z城》：迷失我心，执迷不悔（文/米粒儿是疯子）">《迷失Z城》：迷失我心，执迷不悔（文/米粒儿是疯子</a><span>-- 评美剧 <a href="/resource/10407" class="f3">《迷失》</a></span></h3>
+                      <p class="f4"><a href="/user/2433247">独自哥哥</a> 发表于 2017-06-16 20:30 <font class="dateline" time="1497616214"></font></p>
+                  </div>
+                </li><li class="clearfix">
+                  <div class="fl-img">
+                      <a href="/article/30198"><img src="http://tu.zmzjstu.com/ftp/2017/0616/s_6af91319c8bae4cce3efd11bb5fa6dec.jpg" /></a>
+                  </div>
+                  <div class="fl-tag">
+                    <a href="/article?type=m_review"><span class="tc corner tag2">影评</span></a>
+                  </div>
+                  <div class="fl-info">
+                      <h3><a href="/article/30198" title="《疾速特攻》：告别“坏人死于话多”这条铁定律的极简动作片">《疾速特攻》：告别“坏人死于话多”这条铁定律的极简</a><span>-- 评电影 <a href="/resource/35370" class="f3">《疾速追杀2》</a></span></h3>
+                      <p class="f4"><a href="/user/4674321">弄摩</a> 发表于 2017-06-16 08:50 <font class="dateline" time="1497574204"></font></p>
+                  </div>
+                </li><li class="clearfix">
+                  <div class="fl-img">
+                      <a href="/article/30197"><img src="http://tu.zmzjstu.com/ftp/2017/0615/s_77342badf3fa9c34e561b9cd6960cc87.jpg" /></a>
+                  </div>
+                  <div class="fl-tag">
+                    <a href="/article?type=t_review"><span class="tc corner tag2">剧评</span></a>
+                  </div>
+                  <div class="fl-info">
+                      <h3><a href="/article/30197" title="《纸牌屋》S5之牺牲篇：登顶之路，尸横遍野">《纸牌屋》S5之牺牲篇：登顶之路，尸横遍野</a><span>-- 评美剧 <a href="/resource/28793" class="f3">《纸牌屋》</a></span></h3>
+                      <p class="f4"><a href="/user/3725338">opllx</a> 发表于 2017-06-15 19:59 <font class="dateline" time="1497527997"></font></p>
+                  </div>
+                </li><li class="clearfix">
+                  <div class="fl-img">
+                      <a href="/article/30196"><img src="http://tu.zmzjstu.com/ftp/2017/0614/s_d2c5049f3dce9bd36a17830bbfa9750c.jpg" /></a>
+                  </div>
+                  <div class="fl-tag">
+                    <a href="/article?type=t_review"><span class="tc corner tag2">剧评</span></a>
+                  </div>
+                  <div class="fl-info">
+                      <h3><a href="/article/30196" title="《绝命律师》S3E9：只看结果，不问过程！">《绝命律师》S3E9：只看结果，不问过程！</a><span>-- 评美剧 <a href="/resource/33190" class="f3">《绝命律师》</a></span></h3>
+                      <p class="f4"><a href="/user/3725338">opllx</a> 发表于 2017-06-14 18:04 <font class="dateline" time="1497434649"></font></p>
+                  </div>
+                </li><li class="clearfix">
+                  <div class="fl-img">
+                      <a href="/article/30195"><img src="http://tu.zmzjstu.com/ftp/2017/0613/s_d38a4e79fed8f992245acfd9ae474e7d.jpg" /></a>
+                  </div>
+                  <div class="fl-tag">
+                    <a href="/article?type=m_review"><span class="tc corner tag2">影评</span></a>
+                  </div>
+                  <div class="fl-info">
+                      <h3><a href="/article/30195" title="《超脱》| 与自己内心交战，与不能和解的心魔做个了断">《超脱》| 与自己内心交战，与不能和解的心魔做个了</a><span>-- 评电影 <a href="/resource/26539" class="f3">《超脱》</a></span></h3>
+                      <p class="f4"><a href="/user/4542820">溺水的大象</a> 发表于 2017-06-13 21:43 <font class="dateline" time="1497361404"></font></p>
+                  </div>
+                </li>                </ul>
+           </div>
+           
+           <div class="fr box wonder-comment">
+              <h2 class="it">热门话题</h2>
+              <div class="commentBox">
+              <ul id="commentList">
+              <li class="clearfix">
+                      <div class="fl-img">
+                          <a href="/user/4564549"><img src="http://tu.zmzjstu.com/ftp/avatar/2017/0423/dc9eb4e514844c54181c6f470921b6c9_s.jpg" class="corner50" /></a>
+                      </div>
+                      <div class="fl-info">
+                          <h3><a href="/user/4564549"><span class="f3">1174035912</span></a> 发布于 <a href="/resource/11009" class="f3">美剧 《疑犯追踪》</a> <b class="f1">9.7</b></h3>
+                          <p>没看过。。好像每一季都有二十多集。。。全部有一百多集。。。。好长啊。。。但是看评分。。评论。。再看豆瓣，，，分高得吓人。。。这么长实在不想看..但是绝对不能错过你们说的这样一个神剧啊。。。哎。。先入坑看一季。。看看到底。。。。。</p>
+                          <div class="ico tr">06-14 18:48 <span class="corner tag4">0赞</span><a href="/comment/thread/150757"><span class="corner tag4">5条回复</span></a></div>
+                      </div>
+                  </li><li class="clearfix">
+                      <div class="fl-img">
+                          <a href="/user/3518891"><img src="http://tu.zmzjstu.com/ftp/avatar/f_noavatar_s.gif" class="corner50" /></a>
+                      </div>
+                      <div class="fl-info">
+                          <h3><a href="/user/3518891"><span class="f3">hukai956</span></a> 发布于 <a href="/resource/35401" class="f3">电影 《心之石》</a> <b class="f1">6.6</b></h3>
+                          <p>又是夏天，又是两男孩一女孩，能不能再新奇点！！！！！！！！</p>
+                          <div class="ico tr">06-16 14:11 <span class="corner tag4">0赞</span><a href="/comment/thread/151471"><span class="corner tag4">2条回复</span></a></div>
+                      </div>
+                  </li><li class="clearfix">
+                      <div class="fl-img">
+                          <a href="/user/3536931"><img src="http://tu.zmzjstu.com/ftp/avatar/2017/0504/859eda9784dbc967a15ff3082f1c2714_s.jpg" class="corner50" /></a>
+                      </div>
+                      <div class="fl-info">
+                          <h3><a href="/user/3536931"><span class="f3">avx0533</span></a> 发布于 <a href="/resource/26154" class="f3">美剧 《老爸老妈的浪漫史》</a> <b class="f1">9.5</b></h3>
+                          <p>还挺好的。</p>
+                          <div class="ico tr">06-14 10:02 <span class="corner tag4">0赞</span><a href="/comment/thread/150590"><span class="corner tag4">2条回复</span></a></div>
+                      </div>
+                  </li><li class="clearfix">
+                      <div class="fl-img">
+                          <a href="/user/3638917"><img src="http://tu.zmzjstu.com/ftp/avatar/2016/0112/f7ec6f01d9e3f23237d6f21c9effd9cb_s.jpg" class="corner50" /></a>
+                      </div>
+                      <div class="fl-info">
+                          <h3><a href="/user/3638917"><span class="f3">lhy17</span></a> 发布于 <a href="/resource/33092" class="f3">美剧 《神奇女侠》</a> <b class="f1">8.9</b></h3>
+                          <p>超女里的女总统是她么</p>
+                          <div class="ico tr">06-14 17:32 <span class="corner tag4">0赞</span><a href="/comment/thread/150739"><span class="corner tag4">2条回复</span></a></div>
+                      </div>
+                  </li><li class="clearfix">
+                      <div class="fl-img">
+                          <a href="/user/3743759"><img src="http://tu.zmzjstu.com/ftp/avatar/f_noavatar_s.gif" class="corner50" /></a>
+                      </div>
+                      <div class="fl-info">
+                          <h3><a href="/user/3743759"><span class="f3">531925760.com</span></a> 发布于 <a href="/resource/33102" class="f3">美剧 《马可波罗》</a> <b class="f1">8.0</b></h3>
+                          <p>比国产剧好看多了挺好看的砍掉可惜了</p>
+                          <div class="ico tr">06-14 10:55 <span class="corner tag4">0赞</span><a href="/comment/thread/150617"><span class="corner tag4">2条回复</span></a></div>
+                      </div>
+                  </li><li class="clearfix">
+                      <div class="fl-img">
+                          <a href="/user/3641039"><img src="http://tu.zmzjstu.com/ftp/avatar/f_noavatar_s.gif" class="corner50" /></a>
+                      </div>
+                      <div class="fl-info">
+                          <h3><a href="/user/3641039"><span class="f3">414777</span></a> 发布于 <a href="/resource/35395" class="f3">英剧 《无畏》</a> <b class="f1">9.9</b></h3>
+                          <p>麻烦发一下网盘密码</p>
+                          <div class="ico tr">06-14 09:58 <span class="corner tag4">0赞</span><a href="/comment/thread/150588"><span class="corner tag4">2条回复</span></a></div>
+                      </div>
+                  </li><li class="clearfix">
+                      <div class="fl-img">
+                          <a href="/user/3579106"><img src="http://tu.zmzjstu.com/ftp/avatar/f_noavatar_s.gif" class="corner50" /></a>
+                      </div>
+                      <div class="fl-info">
+                          <h3><a href="/user/3579106"><span class="f3">submarine2008ah</span></a> 发布于 <a href="/resource/10698" class="f3">纪录片 《探索频道 造物小百科》</a> <b class="f1">9.8</b></h3>
+                          <p>想和大神们一起翻译，本人也学机械的，在美国待过一段时间，虽然是学渣，但是希望能帮到忙</p>
+                          <div class="ico tr">06-13 18:42 <span class="corner tag4">0赞</span><a href="/comment/thread/150342"><span class="corner tag4">1条回复</span></a></div>
+                      </div>
+                  </li><li class="clearfix">
+                      <div class="fl-img">
+                          <a href="/user/3490832"><img src="http://tu.zmzjstu.com/ftp/avatar/f_noavatar_s.gif" class="corner50" /></a>
+                      </div>
+                      <div class="fl-info">
+                          <h3><a href="/user/3490832"><span class="f3">狗艹的天朝</span></a> 发布于 <a href="/resource/11033" class="f3">美剧 《辛普森一家》</a> <b class="f1">9.6</b></h3>
+                          <p>第六季第一集呢 为什么没有</p>
+                          <div class="ico tr">06-14 18:38 <span class="corner tag4">0赞</span><a href="/comment/thread/150752"><span class="corner tag4">1条回复</span></a></div>
+                      </div>
+                  </li><li class="clearfix">
+                      <div class="fl-img">
+                          <a href="/user/3553299"><img src="http://tu.zmzjstu.com/ftp/avatar/f_noavatar_s.gif" class="corner50" /></a>
+                      </div>
+                      <div class="fl-info">
+                          <h3><a href="/user/3553299"><span class="f3">滕滕水音</span></a> 发布于 <a href="/resource/26514" class="f3">美剧 《双峰》</a> <b class="f1">8.3</b></h3>
+                          <p>这种莫名其妙 故弄玄虚 一个没有任何意义的镜头能拖10秒钟 演员表情还不变 装逼装过头 一个好的剧本要么就好好叙事 装什么艺术清高 小时候不懂事觉得高大上 现在分辨能力变强了 只送这种片子两个字 傻逼</p>
+                          <div class="ico tr">06-11 18:26 <span class="corner tag4">16赞</span><a href="/comment/thread/149701"><span class="corner tag4">1条回复</span></a></div>
+                      </div>
+                  </li><li class="clearfix">
+                      <div class="fl-img">
+                          <a href="/user/4111259"><img src="http://tu.zmzjstu.com/ftp/avatar/f_noavatar_s.gif" class="corner50" /></a>
+                      </div>
+                      <div class="fl-info">
+                          <h3><a href="/user/4111259"><span class="f3">zyccb</span></a> 发布于 <a href="/resource/29625" class="f3">加剧 《黑色孤儿》</a> <b class="f1">9.4</b></h3>
+                          <p>迅雷下载资源都被举报了，不知道是哪个心理变态干的。</p>
+                          <div class="ico tr">06-11 17:08 <span class="corner tag4">3赞</span><a href="/comment/thread/149670"><span class="corner tag4">1条回复</span></a></div>
+                      </div>
+                  </li><li class="clearfix">
+                      <div class="fl-img">
+                          <a href="/user/4278335"><img src="http://tu.zmzjstu.com/ftp/avatar/f_noavatar_s.gif" class="corner50" /></a>
+                      </div>
+                      <div class="fl-info">
+                          <h3><a href="/user/4278335"><span class="f3">yalong1221</span></a> 发布于 <a href="/resource/31562" class="f3">美剧 《芝加哥警署》</a> <b class="f1">9.3</b></h3>
+                          <p>求网盘 Chicago.PD.S04E01~E23.中英字幕.WEB-HR.AAC.720P.x264.mp4,不要magnet ed2k</p>
+                          <div class="ico tr">06-11 16:36 <span class="corner tag4">2赞</span><a href="/comment/thread/149661"><span class="corner tag4">1条回复</span></a></div>
+                      </div>
+                  </li><li class="clearfix">
+                      <div class="fl-img">
+                          <a href="/user/4345259"><img src="http://tu.zmzjstu.com/ftp/avatar/f_noavatar_s.gif" class="corner50" /></a>
+                      </div>
+                      <div class="fl-info">
+                          <h3><a href="/user/4345259"><span class="f3">liuliu123</span></a> 发布于 <a href="/resource/31801" class="f3">美剧 《硅谷》</a> <b class="f1">9.5</b></h3>
+                          <p>什么时候更新最新一集</p>
+                          <div class="ico tr">06-12 13:46 <span class="corner tag4">2赞</span><a href="/comment/thread/149934"><span class="corner tag4">1条回复</span></a></div>
+                      </div>
+                  </li><li class="clearfix">
+                      <div class="fl-img">
+                          <a href="/user/4864678"><img src="http://tu.zmzjstu.com/ftp/avatar/f_noavatar_s.gif" class="corner50" /></a>
+                      </div>
+                      <div class="fl-info">
+                          <h3><a href="/user/4864678"><span class="f3">下里巴人的头目</span></a> 发布于 <a href="/resource/32097" class="f3">美剧 《哥谭》</a> <b class="f1">9.2</b></h3>
+                          <p>有没有感觉哥谭第三季结局和血族第三季结局很像？都是反派控制小孩按下按钮毁灭城市，不过哥谭最后拿到了解药，血族核爆就没办法了</p>
+                          <div class="ico tr">06-12 17:13 <span class="corner tag4">0赞</span><a href="/comment/thread/149994"><span class="corner tag4">1条回复</span></a></div>
+                      </div>
+                  </li><li class="clearfix">
+                      <div class="fl-img">
+                          <a href="/user/3587344"><img src="http://tu.zmzjstu.com/ftp/avatar/2015/0427/e851d22195f359ae522621205a384fb1_s.jpg" class="corner50" /></a>
+                      </div>
+                      <div class="fl-info">
+                          <h3><a href="/user/3587344"><span class="f3">安德烈sang</span></a> 发布于 <a href="/resource/33400" class="f3">美剧 《我是僵尸》</a> <b class="f1">8.0</b></h3>
+                          <p>还没砍呢</p>
+                          <div class="ico tr">06-13 16:39 <span class="corner tag4">0赞</span><a href="/comment/thread/150309"><span class="corner tag4">1条回复</span></a></div>
+                      </div>
+                  </li><li class="clearfix">
+                      <div class="fl-img">
+                          <a href="/user/3551003"><img src="http://tu.zmzjstu.com/ftp/avatar/f_noavatar_s.gif" class="corner50" /></a>
+                      </div>
+                      <div class="fl-info">
+                          <h3><a href="/user/3551003"><span class="f3">bigboss</span></a> 发布于 <a href="/resource/33554" class="f3">美剧 《黑暗物质》</a> <b class="f1">8.3</b></h3>
+                          <p>人人播放器下不动</p>
+                          <div class="ico tr">06-11 17:25 <span class="corner tag4">0赞</span><a href="/comment/thread/149674"><span class="corner tag4">1条回复</span></a></div>
+                      </div>
+                  </li><li class="clearfix">
+                      <div class="fl-img">
+                          <a href="/user/4564549"><img src="http://tu.zmzjstu.com/ftp/avatar/2017/0423/dc9eb4e514844c54181c6f470921b6c9_s.jpg" class="corner50" /></a>
+                      </div>
+                      <div class="fl-info">
+                          <h3><a href="/user/4564549"><span class="f3">1174035912</span></a> 发布于 <a href="/resource/33699" class="f3">美剧 《无垠的太空》</a> <b class="f1">9.3</b></h3>
+                          <p>第一季到这里下载：http://www.meijutt.com/content/meiju21858.html直接点那行链接</p>
+                          <div class="ico tr">06-12 21:26 <span class="corner tag4">0赞</span><a href="/comment/thread/150090"><span class="corner tag4">1条回复</span></a></div>
+                      </div>
+                  </li><li class="clearfix">
+                      <div class="fl-img">
+                          <a href="/user/3721514"><img src="http://tu.zmzjstu.com/ftp/avatar/f_noavatar_s.gif" class="corner50" /></a>
+                      </div>
+                      <div class="fl-info">
+                          <h3><a href="/user/3721514"><span class="f3">Amorfati</span></a> 发布于 <a href="/resource/34117" class="f3">西剧 《时间管理局》</a> <b class="f1">9.0</b></h3>
+                          <p>深情男主胡里安竟然死了！死了！哎，希望还能复活吧，无论是闪回还是其他什么方式......</p>
+                          <div class="ico tr">06-14 10:44 <span class="corner tag4">2赞</span><a href="/comment/thread/150614"><span class="corner tag4">1条回复</span></a></div>
+                      </div>
+                  </li><li class="clearfix">
+                      <div class="fl-img">
+                          <a href="/user/4564549"><img src="http://tu.zmzjstu.com/ftp/avatar/2017/0423/dc9eb4e514844c54181c6f470921b6c9_s.jpg" class="corner50" /></a>
+                      </div>
+                      <div class="fl-info">
+                          <h3><a href="/user/4564549"><span class="f3">1174035912</span></a> 发布于 <a href="/resource/34165" class="f3">美剧 《殖民地》</a> <b class="f1">8.7</b></h3>
+                          <p>难道就没有人觉得男主太他么的像黄晓明嘛？？？简直太像了。。。。</p>
+                          <div class="ico tr">06-17 19:04 <span class="corner tag4">1赞</span><a href="/comment/thread/151941"><span class="corner tag4">1条回复</span></a></div>
+                      </div>
+                  </li><li class="clearfix">
+                      <div class="fl-img">
+                          <a href="/user/3804638"><img src="http://tu.zmzjstu.com/ftp/avatar/f_noavatar_s.gif" class="corner50" /></a>
+                      </div>
+                      <div class="fl-info">
+                          <h3><a href="/user/3804638"><span class="f3">cba33hgx</span></a> 发布于 <a href="/resource/34499" class="f3">加剧 《私家侦探》</a> <b class="f1">8.2</b></h3>
+                          <p>私家侦探 百度网盘 提取码 是多少啊</p>
+                          <div class="ico tr">06-14 19:57 <span class="corner tag4">1赞</span><a href="/comment/thread/150783"><span class="corner tag4">1条回复</span></a></div>
+                      </div>
+                  </li><li class="clearfix">
+                      <div class="fl-img">
+                          <a href="/user/3602631"><img src="http://tu.zmzjstu.com/ftp/avatar/f_noavatar_s.gif" class="corner50" /></a>
+                      </div>
+                      <div class="fl-info">
+                          <h3><a href="/user/3602631"><span class="f3">无始仙王</span></a> 发布于 <a href="/resource/35389" class="f3">美剧 《越界》</a> <b class="f1">8.5</b></h3>
+                          <p>可惜老得太厉害了，妮可基德曼比她还大一岁，但看起来比她还年轻</p>
+                          <div class="ico tr">06-11 18:15 <span class="corner tag4">0赞</span><a href="/comment/thread/149695"><span class="corner tag4">1条回复</span></a></div>
+                      </div>
+                  </li>              </ul>
+              </div>
+          </div>
+          <div class="clearfix"></div>
+          
+          <div style="text-align:center; margin:10px 0;">
+<!-- <script src="http://g.ousns.net/ga-728-m.js?32" type="text/javascript"></script> -->
+<!-- tb-ssp-728-4 -->
+<script charset="gbk" src="http://p.tanx.com/ex?i=mm_111117185_10092486_48094764"></script>
+</div>
+
+          
+          <div class="lastest-release box">
+              <div class="box_4">
+                  <h2 class="it">最新發布</h2>
+                  <div class="box_1">
+                      <div class="h_d_n">
+                          <ul class="clearfix">
+                          <li>
+                            <a href="/resource/35401" class="imglink"><img src="http://tu.zmzjstu.com/ftp/2017/0616/m_c9c3c3bd64cfd21f0ad02690fb6a30d9.jpg" /></a>
+                            <p><a href="/resource/35401">心之石</a></p>
+                            <font class="f4">电影(美国)</font><br />
+                            <font class="f4">剧情</font>
+                          </li><li>
+                            <a href="/resource/35400" class="imglink"><img src="http://tu.zmzjstu.com/ftp/2017/0616/m_7a5aa31312bd32c34fb98f0d8635f742.jpg" /></a>
+                            <p><a href="/resource/35400">美女摔角联盟</a></p>
+                            <font class="f4">美剧(美国)</font><br />
+                            <font class="f4">剧情/喜剧</font>
+                          </li><li>
+                            <a href="/resource/35399" class="imglink"><img src="http://tu.zmzjstu.com/ftp/2017/0614/m_d2bed7888bfab7fa0122b6283e5437cc.jpg" /></a>
+                            <p><a href="/resource/35399">嗜血战神</a></p>
+                            <font class="f4">电影(意大利)</font><br />
+                            <font class="f4">动作/暴力/血腥/恐怖/罪案</font>
+                          </li><li>
+                            <a href="/resource/35398" class="imglink"><img src="http://tu.zmzjstu.com/ftp/2017/0614/m_6b1e9aa215116ebc41bb4e919b3f82a3.jpg" /></a>
+                            <p><a href="/resource/35398">仅为你作</a></p>
+                            <font class="f4">电影(美国)</font><br />
+                            <font class="f4">纪录</font>
+                          </li><li>
+                            <a href="/resource/35397" class="imglink"><img src="http://tu.zmzjstu.com/ftp/2017/0615/m_0a83d5d84be867e4d0927a541016d21e.jpg" /></a>
+                            <p><a href="/resource/35397">迷雾</a></p>
+                            <font class="f4">美剧(美国)</font><br />
+                            <font class="f4">剧情/恐怖/惊悚</font>
+                          </li><li>
+                            <a href="/resource/35396" class="imglink"><img src="http://tu.zmzjstu.com/ftp/2017/0614/m_78b8e9d91c7841d7d3d93d23c5d45554.jpg" /></a>
+                            <p><a href="/resource/35396">普京访谈录</a></p>
+                            <font class="f4">美剧(美国)</font><br />
+                            <font class="f4">传记</font>
+                          </li><li>
+                            <a href="/resource/35395" class="imglink"><img src="http://tu.zmzjstu.com/ftp/2017/0614/m_961569c76f8a1d341ca81d3aba7f37f5.jpg" /></a>
+                            <p><a href="/resource/35395">无畏</a></p>
+                            <font class="f4">英剧(英国)</font><br />
+                            <font class="f4">悬疑/律政/罪案</font>
+                          </li>                          </ul>
+                      </div> 
+                  </div>
+              </div>
+          </div>
+          
+          <div style="text-align:center; margin-top:10px;">
+<!-- <script src="http://g.ousns.net/ga-728-m2.js?321" type="text/javascript"></script> -->
+<!-- tb-ssp-728 -->
+<script charset="gbk" src="http://p.tanx.com/ex?i=mm_111117185_10092486_42796385"></script>
+</div>
+
+
+          <div class="fl box short-comment">
+            <h2 class="it">评测推荐</h2>
+            <div class="short-comment-con">
+                <ul>
+                <li class="clearfix">
+                      <div class="fl-img">
+                          <a href="/article/30182"><img src="http://tu.zmzjstu.com/ftp/2017/0608/m_ae29c89f93a4debe6be36e1120c909a6.jpg" /></a>
+                      </div>
+                      <div class="fl-info">
+                          <h3><a href="/article?type=new_review"><span class="corner tag1">新剧评测</span></a> <a href="/article/30182"><strong>《太空村》：这是恶搞版的《星际迷航》吗？</strong></a></h3>
+                          <p>《泰迪熊》登上了宇宙飞船，会不会带坏整个飞船的员工和外星人？ <font class="f4">By</font> <a href="/user/4674321"><span class="f3">弄摩</span></a></p>
+                      </div>
+                  </li><li class="clearfix">
+                      <div class="fl-img">
+                          <a href="/article/30175"><img src="http://tu.zmzjstu.com/ftp/2017/0606/m_4931f793da63087ffb720f373bfa03cc.png" /></a>
+                      </div>
+                      <div class="fl-info">
+                          <h3><a href="/article?type=new_review"><span class="corner tag1">新剧评测</span></a> <a href="/article/30175"><strong>秋季新剧前瞻：摩根加入《反恐特警队》继续踹门</strong></a></h3>
+                          <p>Hey，Baby boy！Morgen直接上你这踹门了 <font class="f4">By</font> <a href="/user/4672592"><span class="f3">Mentos!</span></a></p>
+                      </div>
+                  </li><li class="clearfix">
+                      <div class="fl-img">
+                          <a href="/article/30174"><img src="http://tu.zmzjstu.com/ftp/2017/0606/m_757b2c1b881db95e98c29011126bc3e7.png" /></a>
+                      </div>
+                      <div class="fl-info">
+                          <h3><a href="/article?type=new_review"><span class="corner tag1">新剧评测</span></a> <a href="/article/30174"><strong>新剧前瞻：《未完待续》，死不了反而懵逼了</strong></a></h3>
+                          <p>人生自古谁无死，早死晚死都要死，但万一死不成了呢？ <font class="f4">By</font> <a href="/user/4672592"><span class="f3">Mentos!</span></a></p>
+                      </div>
+                  </li><li class="clearfix">
+                      <div class="fl-img">
+                          <a href="/article/30173"><img src="http://tu.zmzjstu.com/ftp/2017/0606/m_76c05bf54795a9b6979c2cf58f581ed0.jpg" /></a>
+                      </div>
+                      <div class="fl-info">
+                          <h3><a href="/article?type=new_review"><span class="corner tag1">新剧评测</span></a> <a href="/article/30173"><strong>秋季新剧前瞻：《海豹突击队》，这世界上最Man最帅的男人</strong></a></h3>
+                          <p>不管你觉得他们帅不帅，反正他们是我的菜！ <font class="f4">By</font> <a href="/user/4672592"><span class="f3">Mentos!</span></a></p>
+                      </div>
+                  </li>              </ul>
+            </div>
+          </div>
+                
+          <div class="fr box world-playing">
+              <h2 class="it">全球电影院正在上映</h2>
+              <div class="listcon-playing">
+                  <div class="fl img-playing"><a href="/resource/35387"><img src="http://tu.zmzjstu.com/ftp/2017/0608/b_df9b4d275e3020a698a9f2455831acfa.jpg"></a></div>
+                  <ul class="fr list-playing">
+                  <li class="cur" data-img='http://tu.zmzjstu.com/ftp/2017/0608/b_df9b4d275e3020a698a9f2455831acfa.jpg' rid="35387"><a href="/resource/35387" target="_blank">《新木乃伊》</a></li><li class="cur" data-img='http://tu.zmzjstu.com/ftp/2017/0607/b_12218d4b3a1199723ff1c450ca44d3a5.jpg' rid="35386"><a href="/resource/35386" target="_blank">《异形：契约》</a></li><li class="cur" data-img='http://tu.zmzjstu.com/ftp/2017/0525/b_3e47a88acec21100044b6b1dd168dc45.jpg' rid="35375"><a href="/resource/35375" target="_blank">《神奇女侠》</a></li><li class="cur" data-img='http://tu.zmzjstu.com/ftp/2017/0525/b_4d263b46329a6bbb6684407721de1c07.jpg' rid="35374"><a href="/resource/35374" target="_blank">《加勒比海盗5：死无对证》</a></li><li class="cur" data-img='http://tu.zmzjstu.com/ftp/2017/0504/b_3ea1d0fb75459c311076951dece3ef79.jpg' rid="35325"><a href="/resource/35325" target="_blank">《银河护卫队2》</a></li><li class="cur" data-img='http://tu.zmzjstu.com/ftp/2017/0301/b_694072a075a1f388ef34eefad71d46bc.jpg' rid="34913"><a href="/resource/34913" target="_blank">《神奇动物在哪里》</a></li>                  </ul>
+                  <div class="clearfix"></div>
+                  <div class="con-playing">
+                    <em></em>
+                    <div class="content" style="display:none;">
+                          <strong class="score">5.1</strong>
+                          <ul>
+                              <li><strong>类型：</strong>动作/冒险</li>
+                              <li><strong>制作：</strong></li>
+                              <li><strong>导演：</strong><a href='/search/index?character=13192' class='f3' target='_blank'>艾里克斯·库兹曼</a></li>    
+                              <li><strong>编剧：</strong><a href='/search/index?character=3731' class='f3' target='_blank'>乔·斯派茨</a> / <a href='/search/index?character=4805' class='f3' target='_blank'>克里斯托弗·麦奎里</a></li>
+                              <li><strong>上映：</strong>2017-06-09(美国)</li>
+                              <li><strong>演员：</strong><a href='/search/index?character=10696' class='f3' target='_blank'>汤姆·克鲁斯</a> / <a href='/search/index?character=48953' class='f3' target='_blank'>索菲亚·波多拉</a> / <a href='/search/index?character=12780' class='f3' target='_blank'>罗素·克劳</a> / <a href='/search/index?character=48954' class='f3' target='_blank'>安娜贝拉·沃丽丝</a> / <a href='/search/index?character=48955' class='f3' target='_blank'>杰克·约翰逊</a> / <a href='/search/index?character=48956' class='f3' target='_blank'>考特尼·万斯</a> / <a href='/search/index?character=48957' class='f3' target='_blank'>马尔万·肯扎里</a></li>
+                              <li>影片讲述数千年前，一个古代王国的公主，因为命运的不公正而被夺去一切，她那木乃伊化的躯体被深埋于荒漠之中，然而千年之后，她却在现代世界中复活了，与她一同复活的还有满腔的怨恨。</li>
+                          </ul>
+                      </div><div class="content" style="display:none;">
+                          <strong class="score">8.2</strong>
+                          <ul>
+                              <li><strong>类型：</strong>科幻/恐怖/惊悚</li>
+                              <li><strong>制作：</strong></li>
+                              <li><strong>导演：</strong><a href='/search/index?character=15501' class='f3' target='_blank'>雷德利·斯科特</a></li>    
+                              <li><strong>编剧：</strong><a href='/search/index?character=48943' class='f3' target='_blank'>迈克尔·格林</a> / <a href='/search/index?character=34412' class='f3' target='_blank'>约翰·洛根</a> / <a href='/search/index?character=48944' class='f3' target='_blank'>杰克·帕格恩</a></li>
+                              <li><strong>上映：</strong>2017-06-16(美国)</li>
+                              <li><strong>演员：</strong><a href='/search/index?character=14596' class='f3' target='_blank'>迈克尔·法斯宾德</a> / <a href='/search/index?character=47037' class='f3' target='_blank'>凯瑟琳·沃特斯顿</a> / <a href='/search/index?character=10547' class='f3' target='_blank'>比利·克鲁德普</a> / <a href='/search/index?character=3570' class='f3' target='_blank'>丹尼·麦克布耐德</a> / <a href='/search/index?character=20681' class='f3' target='_blank'>德米安·比齐尔</a> / <a href='/search/index?character=5681' class='f3' target='_blank'>卡门·艾乔戈</a> / <a href='/search/index?character=48945' class='f3' target='_blank'>朱西·斯莫利特</a> / <a href='/search/index?character=48466' class='f3' target='_blank'>考莉·赫尔南德斯</a> / <a href='/search/index?character=48946' class='f3' target='_blank'>艾米·西米茨</a> / <a href='/search/index?character=48947' class='f3' target='_blank'>纳撒尼尔·迪安</a> / <a href='/search/index?character=48948' class='f3' target='_blank'>亚历山大·英格兰</a> / <a href='/search/index?character=47930' class='f3' target='_blank'>本杰明·里格比</a> / <a href='/search/index?character=48949' class='f3' target='_blank'>乌利·拉图基孚</a> / <a href='/search/index?character=48950' class='f3' target='_blank'>泰丝·哈乌布里奇</a> / <a href='/search/index?character=48951' class='f3' target='_blank'>罗蕾莱·金</a> / <a href='/search/index?character=48952' class='f3' target='_blank'>哈维尔·博特</a> / <a href='/search/index?character=14000' class='f3' target='_blank'>詹姆斯·弗兰科</a> / <a href='/search/index?character=11749' class='f3' target='_blank'>盖·皮尔斯</a> / <a href='/search/index?character=5493' class='f3' target='_blank'>劳米·拉佩斯</a></li>
+                              <li>“科幻之父”雷德利-斯科特将为他所开创的《异形》系列带来新篇章。《异形：契约》的故事发生在《普罗米修斯》10年后，一群新的宇航员乘坐着“契约号”飞船前往遥远的星系寻找殖民地，他们来到一处看似天堂般的星球，实则是黑暗、危险的地狱，在那里他们见到了“普罗米修斯”号唯一的幸存者——由迈克尔·法斯宾德饰演的...</li>
+                          </ul>
+                      </div><div class="content" style="display:none;">
+                          <strong class="score">8.8</strong>
+                          <ul>
+                              <li><strong>类型：</strong>动作/冒险</li>
+                              <li><strong>制作：</strong></li>
+                              <li><strong>导演：</strong><a href='/search/index?character=19377' class='f3' target='_blank'>派蒂·杰金斯</a></li>    
+                              <li><strong>编剧：</strong><a href='/search/index?character=48889' class='f3' target='_blank'>艾伦·海因伯格</a> / <a href='/search/index?character=8637' class='f3' target='_blank'>扎克·施奈德</a> / <a href='/search/index?character=48470' class='f3' target='_blank'>贾森·福克斯</a> / <a href='/search/index?character=48890' class='f3' target='_blank'>威廉·马斯顿</a></li>
+                              <li><strong>上映：</strong>2017-06-02(美国)</li>
+                              <li><strong>演员：</strong><a href='/search/index?character=24249' class='f3' target='_blank'>盖尔·加朵</a> / <a href='/search/index?character=4724' class='f3' target='_blank'>克里斯·派恩</a> / <a href='/search/index?character=12694' class='f3' target='_blank'>罗宾·怀特</a> / <a href='/search/index?character=6502' class='f3' target='_blank'>大卫·休里斯</a> / <a href='/search/index?character=45773' class='f3' target='_blank'>埃琳纳·安娜亚</a> / <a href='/search/index?character=48891' class='f3' target='_blank'>露茜·戴维斯</a> / <a href='/search/index?character=48892' class='f3' target='_blank'>丹尼·赫斯顿</a> / <a href='/search/index?character=13043' class='f3' target='_blank'>艾文·布莱纳</a> / <a href='/search/index?character=13562' class='f3' target='_blank'>萨伊德·塔格马奥</a> / <a href='/search/index?character=8161' class='f3' target='_blank'>康妮·尼尔森</a> / <a href='/search/index?character=48893' class='f3' target='_blank'>杜晨·科洛斯</a></li>
+                              <li>亚马逊公主戴安娜·普林斯（盖尔·加朵 Gal Gadot 饰），经过在家乡天堂岛的训练，取得上帝赐予的武器 与装备，化身神奇女侠，与空军上尉史蒂夫·特雷弗（克里斯·派恩 Chris Pine 饰）一同来到人类世界，一起捍卫和平、拯救世界，在一战期间上演了震撼人心的史诗传奇。</li>
+                          </ul>
+                      </div><div class="content" style="display:none;">
+                          <strong class="score">8.4</strong>
+                          <ul>
+                              <li><strong>类型：</strong>动作/冒险</li>
+                              <li><strong>制作：</strong></li>
+                              <li><strong>导演：</strong><a href='/search/index?character=48878' class='f3' target='_blank'>艾斯彭·山德伯格</a> / <a href='/search/index?character=48879' class='f3' target='_blank'>乔阿吉姆·罗恩尼</a></li>    
+                              <li><strong>编剧：</strong><a href='/search/index?character=20291' class='f3' target='_blank'>特里·鲁西奥</a> / <a href='/search/index?character=48880' class='f3' target='_blank'>泰德·艾略特</a> / <a href='/search/index?character=48881' class='f3' target='_blank'>斯图尔特·贝亚蒂耶</a> / <a href='/search/index?character=24569' class='f3' target='_blank'>杰夫·内桑森</a> / <a href='/search/index?character=48882' class='f3' target='_blank'>杰伊·沃伯特</a></li>
+                              <li><strong>上映：</strong>2017-05-26(美国)</li>
+                              <li><strong>演员：</strong><a href='/search/index?character=23286' class='f3' target='_blank'>约翰尼·德普</a> / <a href='/search/index?character=6113' class='f3' target='_blank'>哈维尔·巴登</a> / <a href='/search/index?character=22980' class='f3' target='_blank'>杰弗里·拉什</a> / <a href='/search/index?character=48883' class='f3' target='_blank'>布伦顿·思韦茨</a> / <a href='/search/index?character=31302' class='f3' target='_blank'>卡雅·斯考达里奥</a> / <a href='/search/index?character=34855' class='f3' target='_blank'>凯文·麦克纳利</a> / <a href='/search/index?character=19182' class='f3' target='_blank'>格什菲·法拉哈尼</a> / <a href='/search/index?character=6715' class='f3' target='_blank'>奥兰多·布鲁姆</a> / <a href='/search/index?character=5047' class='f3' target='_blank'>凯拉·奈特莉</a> / <a href='/search/index?character=48087' class='f3' target='_blank'>斯蒂芬·格拉汉姆</a> / <a href='/search/index?character=6556' class='f3' target='_blank'>大卫·文翰</a> / <a href='/search/index?character=48884' class='f3' target='_blank'>保罗·麦卡特尼</a> / <a href='/search/index?character=33394' class='f3' target='_blank'>马丁·科勒巴</a> / <a href='/search/index?character=48885' class='f3' target='_blank'>亚当·布朗</a> / <a href='/search/index?character=48886' class='f3' target='_blank'>丹尼·基兰</a> / <a href='/search/index?character=48887' class='f3' target='_blank'>马赫什·扎杜</a> / <a href='/search/index?character=48888' class='f3' target='_blank'>胡安·卡洛斯·凡希多</a></li>
+                              <li>故事发生在《加勒比海盗3：世界的尽头》沉船湾之战20年后。 男孩亨利（布兰顿·思怀兹 Brenton Thwaites 饰）随英国海军出航寻找被聚魂棺诅咒的父亲“深海阎王”威尔·特纳（奥兰多·布鲁姆 Orlando Bloom 饰），却在百慕大三角遭遇被解封的亡灵萨拉查船长（哈维尔·巴登 Javie...</li>
+                          </ul>
+                      </div><div class="content" style="display:none;">
+                          <strong class="score">8.5</strong>
+                          <ul>
+                              <li><strong>类型：</strong>动作/科幻/冒险</li>
+                              <li><strong>制作：</strong></li>
+                              <li><strong>导演：</strong><a href='/search/index?character=48666' class='f3' target='_blank'>詹姆斯·古恩</a></li>    
+                              <li><strong>编剧：</strong><a href='/search/index?character=48666' class='f3' target='_blank'>詹姆斯·古恩</a> / <a href='/search/index?character=48667' class='f3' target='_blank'>丹·阿布内特</a> / <a href='/search/index?character=48668' class='f3' target='_blank'>安迪·兰宁</a></li>
+                              <li><strong>上映：</strong>2017-05-05(美国)</li>
+                              <li><strong>演员：</strong><a href='/search/index?character=47511' class='f3' target='_blank'>克里斯·普拉特</a> / <a href='/search/index?character=4402' class='f3' target='_blank'>佐伊·索尔达娜</a> / <a href='/search/index?character=17287' class='f3' target='_blank'>戴夫·巴蒂斯塔</a> / <a href='/search/index?character=13280' class='f3' target='_blank'>范·迪塞尔</a> / <a href='/search/index?character=7890' class='f3' target='_blank'>布莱德利·库珀</a> / <a href='/search/index?character=48669' class='f3' target='_blank'>凯伦·吉兰</a> / <a href='/search/index?character=8148' class='f3' target='_blank'>库尔特·拉塞尔</a> / <a href='/search/index?character=23110' class='f3' target='_blank'>西尔维斯特·史泰龙</a> / <a href='/search/index?character=48670' class='f3' target='_blank'>迈克尔·鲁克</a> / <a href='/search/index?character=48671' class='f3' target='_blank'>肖恩·冈</a> / <a href='/search/index?character=9229' class='f3' target='_blank'>本尼西奥·德尔·托罗</a> / <a href='/search/index?character=44547' class='f3' target='_blank'>伊丽莎白·德比茨基</a> / <a href='/search/index?character=48672' class='f3' target='_blank'>克里斯·沙利文</a> / <a href='/search/index?character=48673' class='f3' target='_blank'>庞·克莱门捷夫</a></li>
+                              <li>漫威影业最新力作《银河护卫队2》带着全新劲爆好听的“劲歌金曲第二辑”回归大银幕！银河护卫队在本集中穿越宇宙，继续外太空的史诗冒险之旅。他们必须共同作战，守护彼此；同时要解开“星爵”彼得·奎尔的身世之谜。旧日敌人变为盟友，漫画中深受喜爱的角色也会现身，对护卫队出手援助。漫威电影宇宙则将持续扩张，进入新...</li>
+                          </ul>
+                      </div><div class="content" style="display:none;">
+                          <strong class="score">8.0</strong>
+                          <ul>
+                              <li><strong>类型：</strong>魔幻</li>
+                              <li><strong>制作：</strong></li>
+                              <li><strong>导演：</strong><a href='/search/index?character=47035' class='f3' target='_blank'>大卫·叶茨</a></li>    
+                              <li><strong>编剧：</strong><a href='/search/index?character=47036' class='f3' target='_blank'>J·K·罗琳</a></li>
+                              <li><strong>上映：</strong>2016-11-25(美国)</li>
+                              <li><strong>演员：</strong><a href='/search/index?character=6285' class='f3' target='_blank'>埃迪·雷德梅恩</a> / <a href='/search/index?character=47037' class='f3' target='_blank'>凯瑟琳·沃特斯顿</a> / <a href='/search/index?character=47038' class='f3' target='_blank'>丹·福勒</a></li>
+                              <li>《神奇动物在哪里》把我们带进了J·K·罗琳笔下一个崭新的魔法世界，一段早于《哈利·波特》几十年，发生在地球另一端的故事。
+　　1926年纽约的魔法世界，危机四伏。某个神秘的力量在街头制造了一连串的破坏，并扬言要向反魔法师狂热组织第二塞勒姆'揭露魔法社会的存在，并借他们的手斩草除根。而强大的黑魔法师...</li>
+                          </ul>
+                      </div>                  </div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+
+            <div style="text-align:center; margin-top:10px;">
+<!-- tb-ssp-728-2 -->
+<script charset="gbk" src="http://p.tanx.com/ex?i=mm_111117185_10092486_44940980"></script>
+</div>
+
+
+            <div class="fl box top-update">
+                <h2 class="it">最後更新</h2>
+                <ul>
+                <li>
+                  <div class="img"><a href="/resource/35380"><img src="http://tu.zmzjstu.com/ftp/2017/0607/s_4da4fe22d80b4bd6327caeaef761dd9b.jpg" /></a></div>
+                  <div class="t"><font class="f14">【英剧】<a href="/resource/35380"><strong>《白金狂人》</strong></a></font> [喜剧] <strong class="f16 f1">8.9</strong></div>
+                  <p>原名：<strong>White Gold</strong></p>
+                  <p>说明：[@电波字幕组 中英双语][第一季 更新至04集]</p>
+                </li><li>
+                  <div class="img"><a href="/resource/30989"><img src="http://tu.zmzjstu.com/ftp/2013/1027/s_b7ab1d40fbd1104d58761f4902ce0351.jpg" /></a></div>
+                  <div class="t"><font class="f14">【电影】<a href="/resource/30989"><strong>《万福玛丽亚》</strong></a></font> [剧情/惊悚/罪案] <strong class="f16 f1">9.9</strong></div>
+                  <p>原名：<strong>Maria Full of Grace</strong></p>
+                  <p>说明：</p>
+                </li><li>
+                  <div class="img"><a href="/resource/24305"><img src="http://tu.zmzjstu.com/ftp/attachment/201012/18/s_950222_1292677368VZ1Z.jpg" /></a></div>
+                  <div class="t"><font class="f14">【电影】<a href="/resource/24305"><strong>《初音未来3月9日感谢祭演唱会》</strong></a></font> [] <strong class="f16 f1">8.9</strong></div>
+                  <p>原名：<strong>Miku 39's Giving Day</strong></p>
+                  <p>说明：</p>
+                </li><li>
+                  <div class="img"><a href="/resource/32267"><img src="http://tu.zmzjstu.com/ftp/2014/0616/s_bca18b1f49a6b3d0bb932ef4ed59ded8.jpg" /></a></div>
+                  <div class="t"><font class="f14">【电影】<a href="/resource/32267"><strong>《过失》</strong></a></font> [动作/惊悚/罪案/枪战] <strong class="f16 f1">6.7</strong></div>
+                  <p>原名：<strong>Mea Culpa</strong></p>
+                  <p>说明：</p>
+                </li><li>
+                  <div class="img"><a href="/resource/29079"><img src="http://tu.zmzjstu.com/ftp/2013/0210/s_1d1c55b95071e3267fc4ed3dcce185e7.jpg" /></a></div>
+                  <div class="t"><font class="f14">【电影】<a href="/resource/29079"><strong>《疯狂保姆》</strong></a></font> [剧情/喜剧] <strong class="f16 f1">6.0</strong></div>
+                  <p>原名：<strong>Mental</strong></p>
+                  <p>说明：</p>
+                </li><li>
+                  <div class="img"><a href="/resource/33940"><img src="http://tu.zmzjstu.com/ftp/2015/0922/s_7f7978a75fef9280c98b5c2b7039447e.jpg" /></a></div>
+                  <div class="t"><font class="f14">【电影】<a href="/resource/33940"><strong>《我和厄尔以及将死的女孩》</strong></a></font> [剧情/喜剧] <strong class="f16 f1">8.9</strong></div>
+                  <p>原名：<strong>Me and Earl and the Dying Girl</strong></p>
+                  <p>说明：</p>
+                </li>                </ul>
+            </div>
+            
+            <div class="fr box top-tv">
+                <h2 class="it">新劇推薦</h2>
+                <ul>
+                <li>
+                  <div class="fl-img"><a href="http://www.zimuzu.tv/gresource/35039"><img src="http://tu.zmzjstu.com/ftp/2017/0501/68762ef81e596db9be6a6b2a12f13866.jpg"></a></div>
+                    <div class="fl-info">
+                    <h3><a href="http://www.zimuzu.tv/gresource/35039">《侍女的故事》</a></h3>
+                        <p>讲述未来的世界中，美国被推翻并建立了一个名为Gilead的反乌托邦﹑极权主义的社会。女主角就成为了统治者们的侍女，作用是当生育的工具</p>
+                  </div>
+                </li><li>
+                  <div class="fl-img"><a href="http://www.zimuzu.tv/gresource/35018"><img src="http://tu.zmzjstu.com/ftp/2017/0501/c6b9d5f57e0ab4210876b8ce8727956f.jpg"></a></div>
+                    <div class="fl-info">
+                    <h3><a href="http://www.zimuzu.tv/gresource/35018">《傲骨之战》</a></h3>
+                        <p>「傲骨贤妻」衍生剧。剧情依然精彩，台词照常戳心。</p>
+                  </div>
+                </li><li>
+                  <div class="fl-img"><a href="http://www.zmz2017.com/gresource/35021"><img src="http://tu.zmzjstu.com/ftp/2017/0206/aa41dd433690c8c0c4f1cf481e2152d7.jpg"></a></div>
+                    <div class="fl-info">
+                    <h3><a href="http://www.zmz2017.com/gresource/35021">《全境通告》</a></h3>
+                        <p>在一个破产的城市中，一个亿万富翁，因为好友被谋杀，设立一支私人的警察部队，以解决市里各种混乱的情况。</p>
+                  </div>
+                </li><li>
+                  <div class="fl-img"><a href="http://www.zmz2017.com/gresource/35042"><img src="http://tu.zmzjstu.com/ftp/2017/0206/ec89190999491a149507f89fb48fe579.jpg"></a></div>
+                    <div class="fl-info">
+                    <h3><a href="http://www.zmz2017.com/gresource/35042">《假面真情》</a></h3>
+                        <p>诈骗高手Ava拥有美貌和魅力，无论男女都会情不自禁地爱上她，直到她竟然爱上了最新诈骗对象....</p>
+                  </div>
+                </li><li>
+                  <div class="fl-img"><a href="http://www.zmz2017.com/gresource/35111"><img src="http://tu.zmzjstu.com/ftp/2017/0206/6d885c325f974ff07847ebd22b05b72f.jpg"></a></div>
+                    <div class="fl-info">
+                    <h3><a href="http://www.zmz2017.com/gresource/35111">《24小时：遗产》</a></h3>
+                        <p>FOX的《24小时》重启剧集：《24小时：遗产》</p>
+                  </div>
+                </li><li>
+                  <div class="fl-img"><a href="http://www.zmz2017.com/gresource/35006"><img src="http://tu.zmzjstu.com/ftp/2017/0206/5ff66c336120bd16b9648bc6e21efe52.jpg"></a></div>
+                    <div class="fl-info">
+                    <h3><a href="http://www.zmz2017.com/gresource/35006">《我不是超人》</a></h3>
+                        <p>女主就职于Wayne Security，该公司开发产品以保护平凡大众，以免成为英雄及反派对决时的附带损害</p>
+                  </div>
+                </li><li>
+                  <div class="fl-img"><a href="http://www.zimuzu.tv/gresource/34972"><img src="http://tu.zmzjstu.com/ftp/2017/0108/47edf953d0d76a28fe8062505e3125f4.jpg"></a></div>
+                    <div class="fl-info">
+                    <h3><a href="http://www.zimuzu.tv/gresource/34972">《缘起泽尔达》</a></h3>
+                        <p>根据泽尔达的生平改编，讲述了她如何从一个传统南方淑女变成了一个爵士年代狂野艳丽的摩登女郎。</p>
+                  </div>
+                </li><li>
+                  <div class="fl-img"><a href="http://www.zimuzu.tv/gresource/34919"><img src="http://tu.zmzjstu.com/ftp/2017/0108/cd5805a1e6a2f78321e2fadefdf8f346.jpg"></a></div>
+                    <div class="fl-info">
+                    <h3><a href="http://www.zimuzu.tv/gresource/34919">《河谷镇》</a></h3>
+                        <p>讲述的是Archie﹑Betty﹑Veronica还有他们的朋友一起在小镇上探索奇异事件。 </p>
+                  </div>
+                </li>                </ul>
+            </div>
+            <div class="clearfix"></div>
+
+      <div class="box friendlinks">
+                <h2 class="it">好站推荐</h2>
+                <div class="clearfix imgs">
+                  <ul>
+                  <li><a href="http://www.chimeiju.com/" target="_blank"><img src="http://tu.zmzjstu.com/ftp/2017/0314/5d5249ea55eba7432627f2399b0c57bc.gif"></a></li><li><a href="http://cili001.com/" target="_blank"><img src="http://tu.zmzjstu.com/ftp/2016/1002/e487d15d7edb0f2a1e3b7f44b18bafad.png"></a></li><li><a href="http://www.zhuixinfan.com/main.php" target="_blank"><img src="http://tu.zmzjstu.com/ftp/2015/1107/157388765bf4559293e70cf06290881b.png"></a></li><li><a href="http://iszhd.com/exarkka3/tpl-renren" target="_blank"><img src="http://tu.zmzjstu.com/ftp/2017/0412/48a7aea6b52b0e7501444e3123345a44.jpg"></a></li><li><a href="http://91dict.com/" target="_blank"><img src="http://tu.zmzjstu.com/ftp/2016/1002/def454090a2142fe6705a35938e99b65.png"></a></li><li><a href="http://www.flvcd.com" target="_blank"><img src="http://tu.zmzjstu.com/ftp/2015/1107/a3604796645b4e9b533b8bf74bf8b3e5.jpg"></a></li>                  </ul>
+                </div>
+                <div class="clearfix txt">
+                  <ul>
+                  <li><a href="http://subhd.com" target="_blank">Sub HD字幕站</a></li><li><a href="http://www.chimeiju.com/" target="_blank">天天美剧在线看</a></li><li><a href="http://hd.cnscg.com" target="_blank">圣城论坛</a></li><li><a href="http://shinybbs.com/" target="_blank">深影论坛</a></li><li><a href="http://dbfansub.com/" target="_blank">电波字幕组</a></li><li><a href="http://www.deefun.com/" target="_blank">迪幻字幕组</a></li><li><a href="http://assrt.net/" target="_blank">射手网(伪)</a></li><li><a href="http://www.80s.tw/" target="_blank">80s手机电影</a></li><li><a href="http://www.zimuku.net" target="_blank">字幕库</a></li> 
+                  </ul>
+                </div>
+            </div>
+     </div>
+</div>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+  GLOBAL.JQUERY.TodayRecom($('.today-play .list ul'));
+  GLOBAL.JQUERY.SwitchTab({obj:$('#focus #tabs li'),target:$('#focus #output li'),className:'cur',method:'mouseover',autoPlay:1});
+  GLOBAL.JQUERY.SwitchTab({obj:$('ul.list-playing>li'),target:$('.world-playing .content'),className:'cur',method:'mouseover',callback:function(){
+    $('.img-playing').html('<a href="/resource/'+$(this).attr('rid')+'" target="_blank"><img src="'+$(this).attr('data-img')+'"></a>');}});
+  GLOBAL.JQUERY.Scroll({obj:$('#commentList')});
+  $('.dateline').each(function(){
+    var string = GLOBAL.Util.formatDate($(this).attr('time'),'',1);
+    if(string) $(this).text('('+string+')');
+  });
+  GLOBAL.JQUERY.IMAGERESIZE($('.top-news .fl-img img'),100,56);
+  GLOBAL.JQUERY.IMAGERESIZE($('.lastest-release li img'),96,132);
+});
+</script>
+<div style="text-align:center;margin-top:15px">
+<script type="text/javascript">
+if(typeof(is_ga_a)!='undefined' && is_ga_a()){
+    //tb-ssp-950x90
+    document.write('<script charset="gbk" src="http://p.tanx.com/ex?i=mm_111117185_10092486_42796389"><\/script>');
+}
+</script>
+</div>
+
+<script src="http://g.ousns.net/ad-footer.js?27211" type="text/javascript"></script>
+
+<div class="lx167" style="width:1038px;margin:10px auto;background-color:#fff"></div>
+<script>
+GLOBAL.JQUERY.LazyLoad($('div.lx167'),function(){
+  $('div.lx167').html('<iframe src="http://www.lx167.com/index/promo_iframe" width="1038" height="147" frameborder="0"></iframe>');
+});
+</script>
+
+<div class="footer">
+  <p class="tc" style="font-size:12px;"><a href="http://allyingshi.com/fanyi/index.html" target="_blank">商业翻译洽谈</a>  <a href="http://www.zimuzu.tv/announcement/63">联系我们</a>   <a href="/Announcement">加入字幕组</a>  <a href="http://app.zimuzu.tv/" target="_blank">APP手机客户端</a>  <a href="http://www.zimuzu.tv/bbs/list?fid=413">意见反馈</a>   <a href="http://www.zimuzu.tv/announcement/65">账号异常申诉</a>   <a href="http://www.zimuzu.tv/announcement/67">申请本站公共API接口</a>   <div style="width:1px;overflow: hidden;height:1px;"><script src="http://s95.cnzz.com/z_stat.php?id=1254180690&web_id=1254180690" language="JavaScript"></script></div></p>
+  <p class="tc" style="font-size:14px;"><img src="http://tu.zmzjstu.com/images/dibulogo.png">&nbsp;YYeTs人人影视 2006-2017 ©神盾信息有限公司 (香港) Shield Technologies Limited</p>
+</div>
+<style>
+.WB_follow_ex, .WB_follow_ex .follow_btn_line{margin:0 auto !important;}
+</style>
+<script>eval(xianliao);</script>
+<script type='text/javascript' charset='UTF-8' src='https://www.xianliao.me/embed.js'></script>
+</body>
+</html>

@@ -1,0 +1,637 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="http://js.zmzjstu.com/style/layout.css" rel="stylesheet" type="text/css" />
+<link href="http://js.zmzjstu.com/style/style.css" rel="stylesheet" type="text/css" />
+<script src="http://js.zmzjstu.com/js/jquery-1.7.1.min.js" charset="utf-8"></script>
+<script src="http://js.zmzjstu.com/js/global.js?v=20160922" charset="utf-8"></script>
+<title>冰血暴,搜索结果页</title>
+<meta name="keywords" content="连载,RMVB,HR-HDTV,MP4,MKV,720P,1080P,迅雷,电驴,磁力,网盘,字幕,下载,美女在线观看">
+<meta name="description" content="ZiMuZu字幕组网站,www.zimuzu.tv是一群由海外留学生于2015年1月1号组建的字幕组分享网站,以翻译最新最快影 视剧为兴趣爱好,并且免费分享给广大网友和爱好者，欢迎大家的加入">
+</head>
+<body>
+<script>
+var uri = document.location.href.toLowerCase();
+var na = ['/release/','/user/reg','/work/'];
+var na_ga = [];
+
+function is_a(){
+for(var i in na)
+    if(uri.indexOf(na[i])>=0) return false;
+return true;
+}
+
+function is_ga_a(){
+var t = na.concat(na_ga);
+for(var i in t)
+    if(uri.indexOf(t[i])>=0) return false;
+return true;
+}
+</script>
+
+<div id="floatAD_l" class="couplet couplet_l" style="width:160px;">
+<script type="text/javascript">
+if(is_a())
+{
+    var cpro_id = "u2963755";
+    document.write('<script type="text/javascript" src="http://cpro.baidustatic.com/cpro/ui/c.js"><\/script>');
+}
+</script>
+</div>
+
+<div id="floatAD_r" class="couplet couplet_l" style="width:160px;">
+<!-- 
+<script type="text/javascript">
+if(is_ga_a()) document.write('<script src="http://g.ousns.net/ga-160-right.js?321" type="text/javascript"><\/script>');
+</script>
+-->
+</div>
+
+<style> .couplet{position:fixed;z-index:99999;} </style>
+
+<script type="text/javascript">
+if(is_ga_a()) {
+    var min_w = 1330;
+    GLOBAL.JQUERY.FloatAD(null,null,null,35);
+    if($(window).width()<min_w){
+        $('#floatAD_l').hide();
+        $('#floatAD_r').hide();
+        $('#floatAD_l').remove();
+        $('#floatAD_r').remove();
+    }
+    $(document).ready(function(){
+        if($(window).width()<min_w){
+            $('#floatAD_l').hide();
+	    $('#floatAD_r').hide();
+	    $('#floatAD_l').remove();
+	    $('#floatAD_r').remove();
+        }
+        $(window).trigger('resize');
+    });
+} else {
+    $('#floatAD_l').hide();
+    $('#floatAD_r').hide();
+    $('#floatAD_l').remove();
+    $('#floatAD_r').remove();
+}
+</script>
+
+<script type="text/javascript">
+/*
+if(is_a()){
+	document.write('<a style="display:none!important" id="tanx-a-mm_111117185_10092486_33642254"></a>');
+	tanx_s = document.createElement("script");
+	tanx_s.type = "text/javascript";
+	tanx_s.charset = "gbk";
+	tanx_s.id = "tanx-s-mm_111117185_10092486_33642254";
+	tanx_s.async = true;
+	tanx_s.src = "http://p.tanx.com/ex?i=mm_111117185_10092486_33642254";
+	tanx_h = document.getElementsByTagName("head")[0];
+	if(tanx_h)tanx_h.insertBefore(tanx_s,tanx_h.firstChild);
+}
+*/
+</script>
+
+<script type="text/javascript">
+/*
+//rich
+//if(!GLOBAL.AdUtils.is_inside_man() && is_a())
+if(is_a())
+{
+    var ads = new Array();
+    ads.push('<script charset="gbk" src="http://p.tanx.com/ex?i=mm_111117185_10092486_33642254"><\/script>');
+    ads.push('<script charset="gbk" src="http://p.tanx.com/ex?i=mm_111117185_10092486_33642254"><\/script>');
+    ads.push('<script charset="gbk" src="http://p.tanx.com/ex?i=mm_111117185_10092486_33642254"><\/script>');
+    ads.push('<script type="text/javascript" src="http://g.ousns.net/rich-300.js?123"><\/script>');
+    GLOBAL.AdUtils.rich(ads, 'zmz_rich');
+}
+*/
+</script>
+
+<div class="top-box">
+    <div class="header">
+  <div class="w">
+      <h1 class="fl"><a href="/" class="w_index"><img id="logo"></a></h1>
+      <form name="search" action="/search/index" method="get" class="fl corner search-box">
+          <input type="text"  size="20" class="keywords" name="keyword" autocomplete='off' placeholder="請輸入搜尋關鍵詞" />
+          <input type="submit" class="submit">
+          <div class="search-list" style="display:none;"></div>
+          <ul id="top_search_list" style="display:none;"></ul>
+          <input type="hidden" name="search_type" id="search_type" value="">
+      </form>
+      <span style="position: relative; font-size: 16px; font-weight: bold; left: 20px; top: 15px;"><a href="http://app.zimuzu.tv" target="_blank" style="color:#fff">手机APP客户端</a></span>
+       <div class="fr top-login">
+        <!-- 未登录 -->
+        <div class="top-login-before" style="display:none;"><div class="u"><em class="ico user-ico"></em><a href="/user/login">登入</a>/ <a href="/user/reg">註冊</a></div></div>
+        <!-- 未登录 -->
+        <!-- 已登录 -->
+        <div class="top-login-after" style="display:none;">
+          <div class="fl u">
+          </div>
+          <div class="fl e top_msg">
+            <em class="corner" style="display:none;"></em>
+            <div class="user-pop p-email">
+                <div class="user-pop-con corner">
+                    <span class="ar"></span>
+                      <ul>
+                        <li class="message"><a href='/user/message'><span>私信</span></a><strong class="corner"></strong></li>
+                        <!-- <li><span>评论回复</span><strong class="corner">10</strong></li> -->
+                        <!-- <li><span>好友动态</span><strong class="corner">10</strong></li> -->
+                        <!-- <li class="help"><span>求档回复</span><strong class="corner"></strong></li> -->
+                        <!-- <li><span>好友申请</span><strong class="corner">10</strong></li> -->
+                        <li class="sys_message" style="margin-bottom: 10px;"><a href="/user/sysmessage"><span>系统通知</span></a><strong class="corner"></strong></li>
+                        <!-- <li class="link tc"><a href="javascript:;" class="corner">忽略以上提醒</a></li> -->
+                      </ul>
+                  </div>
+              </div>
+          </div>
+          <div class="fr fb">
+            我要发布<em></em>
+            <div class="user-pop p-release">
+                <div class="user-pop-con corner">
+                    <span class="ar"></span>
+                      <ul id="post_List">
+                      </ul>
+                  </div>
+              </div>
+          </div>
+        </div>
+        <!-- 已登录 -->
+       </div>
+  </div>
+</div>
+
+<div class="notice">
+  <div class="w">
+    <p><strong class="f0">网站公告：</strong> <a target="_blank"><span></span></a></p>
+    <a class="close">x</a>
+  </div>
+</div>
+
+<style>
+.signin-tips{ border-radius:5px; border:1px solid #a6884c; background:#fab639; color:#fff; width:436px; height:95px; box-shadow:3px 3px 0 rgba(0,0,0,.3);z-index: 999;}
+.signin-tips .fl{ font-size:60px; font-weight:bold; width:40%; text-align:center; margin-top:36px; text-shadow:1px 1px 0 #333;}
+.signin-tips .fr{ width:60%; font-size:17px; line-height:150%; margin-top:17px; text-shadow:1px 1px 0 #666;}
+.signin-tips .fr b{ font-size:25px;}
+</style>
+<script>
+$('#logo').attr('src',GLOBAL.CONST.RES_URL+'images/logo.png');
+GLOBAL.JQUERY.SEARCHTIPS(250,function(){$('.search-list').hide()});
+
+$.getJSON(GLOBAL.CONST.WWW_URL+'public/hotkeyword',function(R){
+  var data = R.data;
+  var html = '<li><a href="http://www.6.cn/coop/pub/?src=yyetst" target="_blank" rel="nofollow"><span style="color:#ED8600">1</span>美女在线视频</a></li>\
+';
+  for(key in data){
+    key = parseInt(key);
+    if (typeof data[key].keyword !== 'undefined') html += '<li><a href="/search?keyword='+encodeURIComponent(data[key].keyword)+'"><span class="corner50">'+(key+1)+'</span>'+data[key].keyword+'</a></li>';
+  }
+  $('.search-list').html('<ul class="corner box key-result">'+html+'</ul>');
+});
+
+var navbar_a,navbar_b,xianliao;
+$.ajax({
+  url: '/user/login/getCurUserTopInfo',
+  async: false, 
+  dataType: "json",
+  success: function(R){
+    xianliao = R.data.xianliao;
+    GLOBAL.InitTopUserInfo(R.data,R.status);
+  }
+});
+
+
+$(document).ready(function(){
+  $('.top-login-after .fb').mouseover(function(){
+    $(this).addClass('fb-selected');
+  }).mouseout(function(){
+    $(this).removeClass('fb-selected');
+  })
+  $('#logout').click(function(){
+    GLOBAL.Loading();
+    $.getJSON('/user/logout/ajaxLogout',function(data){
+      if(data.status==1){
+        window.history.go(0);
+      }
+      GLOBAL.Loading('hide');
+    });
+    return false;
+  });
+});
+</script>
+    <div style="text-align:center; margin:10px 0 15px 0;">
+<script type="text/javascript">
+//if(is_ga_a()) document.write('<script src="http://g.ousns.net/ga-728-t.js?232" type="text/javascript"><\/script>');
+//tb-ssp-728-top
+if(typeof(is_ga_a)!='undefined' && is_ga_a())
+	document.write('<script charset="gbk" src="http://p.tanx.com/ex?i=mm_111117185_10092486_48076988"><\/script>');
+</script>
+</div>
+
+    <div class="menu-box">
+  <ul class="w">
+    <li><a href="/" class="w_index">首页</a></li>
+    <li channel="article"><a href="/article">资讯</a></li>
+    <li channel="subtitle"><a href="/subtitle">字幕下载</a></li>
+    <li channel="resource"><a href="/resourcelist">影视库</a></li>
+    <li channel='top'><a href="/html/top/week.html">排行榜</a></li>
+    <li channel="today"><a href="/today">今日更新</a></li>
+    <li channel='schedule'><a href="/tv/schedule">播出表</a></li>
+    <li channel="help"><a href="/help">互助求档</a></li>
+    <li><a href="https://www.6.cn/coop/pub/?src=yyetst" target="_blank" rel="nofollow">美女视频</a></li>
+    <li><a href="/Announcement">加入字幕组</a></li>
+  </ul>
+</div>
+<script type="text/javascript">
+$('.w_index').attr('href','/?_='+Math.random(4));
+
+$(document).ready(function(){
+  if(navbar_a) $('.menu-box li:first').after(navbar_a);
+  if(navbar_b) $('.menu-box li:last').after(navbar_b);
+  var matches = window.location.href.match(/http:\/\/[^/]+(\/.*)/);
+  var group_name = matches==null?'':matches[1].replace(/\/{2,}/m,'/');
+  var groups = {'article':'^/article','fav':'^/user/fav','subtitle':'^/[a-z]?subtitle','resource':'^/[a-z]?resourcelist|/[a-z]?resource/','schedule':'^/tv/schedule|/html/return|/html/new','today':'^/today','help':'^/help','top':'^/html/top/'};
+  for(key in groups)
+  {
+    regx = new RegExp(groups[key],'i');
+    if(group_name.search(regx)!=-1)
+    {
+      $('.menu-box li[channel='+key+'] a').addClass('cur');
+      return true;
+    }
+  }
+  $('.menu-box li:first a').addClass('cur');
+});
+</script>
+<div style="text-align:center; margin:0 0 15px 0;">
+<script type="text/javascript">
+//if(is_ga_a()) document.write('<script src="http://g.ousns.net/ga-728-t.js?232" type="text/javascript"><\/script>');
+//tb-ssp-728-top2
+if(typeof(is_ga_a)!='undefined' && is_ga_a()) document.write('<script charset="gbk" src="http://p.tanx.com/ex?i=mm_111117185_10092486_48076989"><\/script>');
+</script>
+</div>
+
+</div>
+
+<div class="middle-box">
+    <div class="w">
+        <div class="area-left">
+          <div class="box search-result-box">
+              <div class="article-tab">
+                查看：<a class="search_type" type="">全部(78)</a><a class="search_type" type="resource">影视(2)</a><a class="search_type" type="subtitle">字幕(53)</a><a class="search_type" type="article">资讯(23) </a>
+            </div>
+                <div class="search-result">
+                  <div id="ad1" style="display:none;text-align:center;margin:10px 0;overflow:hidden">
+<a target="_blank" href="http://52meiju.taobao.com/"><img src="http://img.zimuzu.tv/52meiju_700_90.jpg"/></a>
+</div>
+<script>
+$(function(){
+    $('#ad1').show().insertAfter('div.search-result li:eq(4)');
+});
+</script>
+
+                  <ul>
+                    <li>
+                            <div class="clearfix search-item">
+                              <em style="background:#0d82cb;">电视剧</em>
+                                <div class="fl-img"><a href="/resource/31951"><img src="http://tu.zmzjstu.com/ftp/2017/0331/s_ee91b206d2b79da5d0b92e7abcb4a7a6.jpg"></a></div>
+                                <div class="fl-info">
+                                    <div class="t f14"><a href="/resource/31951"><strong class="list_title">《冰血暴》(Fargo)</strong></a></div>
+                                    <p>发布：<font class="f4 time">1396138289</font></p>
+                                    <p>更新：<font class="f1 time">1497675380</font></p>
+                                </div>
+                            </div>
+                        </li>
+                    <li>
+                            <div class="clearfix search-item">
+                              <em style="background:#0d82cb;">电影</em>
+                                <div class="fl-img"><a href="/resource/20258"><img src="http://tu.zmzjstu.com/ftp/2014/0430/s_c308d54a1c70cb0a66fa2cc17eb80fc9.jpg"></a></div>
+                                <div class="fl-info">
+                                    <div class="t f14"><a href="/resource/20258"><strong class="list_title">《冰血暴》(Fargo)</strong> </a></div>
+                                    <p>发布：<font class="f4 time">1248493274</font></p>
+                                    <p>更新：<font class="f1 time">1495069317</font></p>
+                                </div>
+                            </div>
+                        </li>
+                                        <li>
+                            <div class="clearfix search-item">
+                              <em>字幕</em>
+                                <div class="fl-info">
+                                    <div class="t f14"><a href="/subtitle/52825"><strong class="list_title">[美剧字幕]《冰血暴 第三季第九集》(Fargo S03E09)</strong>[简体/繁体/英文/中英][ZiMuZu原创翻译]</a></div>
+                                    <p>版本：<font class="f4">Fargo.S03E09.PROPER.720p.HDTV.x264-KILLERS</font></p>                                    <p>发布：<font class="f4 time">1497523007</font></p>
+                                    <p>更新：<font class="f1 time">1497523007</font></p>
+                                </div>
+                            </div>
+                        </li>                    <li>
+                            <div class="clearfix search-item">
+                              <em>字幕</em>
+                                <div class="fl-info">
+                                    <div class="t f14"><a href="/subtitle/52797"><strong class="list_title">[美剧字幕]《冰血暴 第三季第八集》(Fargo S03E08)</strong>[简体/繁体/英文/中英][ZiMuZu原创翻译]</a></div>
+                                    <p>版本：<font class="f4">Fargo.S03E08.720p.HDTV.x264-AVS</font></p>                                    <p>发布：<font class="f4 time">1496905558</font></p>
+                                    <p>更新：<font class="f1 time">1496905558</font></p>
+                                </div>
+                            </div>
+                        </li>                    <li>
+                            <div class="clearfix search-item">
+                              <em>字幕</em>
+                                <div class="fl-info">
+                                    <div class="t f14"><a href="/subtitle/52711"><strong class="list_title">[美剧字幕]《冰血暴 第三季第七集》(Fargo S03E07)</strong>[简体/繁体/英文/中英][ZiMuZu原创翻译]</a></div>
+                                    <p>版本：<font class="f4">Fargo.S03E07.720p.HDTV.x264-FLEET</font></p>                                    <p>发布：<font class="f4 time">1496301428</font></p>
+                                    <p>更新：<font class="f1 time">1496301428</font></p>
+                                </div>
+                            </div>
+                        </li>                    <li>
+                            <div class="clearfix search-item">
+                              <em>字幕</em>
+                                <div class="fl-info">
+                                    <div class="t f14"><a href="/subtitle/52643"><strong class="list_title">[美剧字幕]《冰血暴 第三季第六集》(Fargo S03E06)</strong>[简体/繁体/英文/中英][ZiMuZu原创翻译]</a></div>
+                                    <p>版本：<font class="f4">Fargo.S03E06.720p.HDTV.x264-AVS</font></p>                                    <p>发布：<font class="f4 time">1495697526</font></p>
+                                    <p>更新：<font class="f1 time">1495697526</font></p>
+                                </div>
+                            </div>
+                        </li>                    <li>
+                            <div class="clearfix search-item">
+                              <em>字幕</em>
+                                <div class="fl-info">
+                                    <div class="t f14"><a href="/subtitle/52544"><strong class="list_title">[美剧字幕]《冰血暴 第三季第五集》(Fargo S03E05)</strong>[简体/繁体/英文/中英][ZiMuZu原创翻译]</a></div>
+                                    <p>版本：<font class="f4">Fargo.S03E05.720p.HDTV.x264-KILLERS</font></p>                                    <p>发布：<font class="f4 time">1495098283</font></p>
+                                    <p>更新：<font class="f1 time">1495098283</font></p>
+                                </div>
+                            </div>
+                        </li>                    <li>
+                            <div class="clearfix search-item">
+                              <em>字幕</em>
+                                <div class="fl-info">
+                                    <div class="t f14"><a href="/subtitle/52447"><strong class="list_title">[美剧字幕]《冰血暴  第三季第四集》(Fargo S03E04)</strong>[简体/繁体/英文/中英][ZiMuZu原创翻译]</a></div>
+                                    <p>版本：<font class="f4">Fargo.S03E04.720p.HDTV.x264-AVS</font></p>                                    <p>发布：<font class="f4 time">1494493793</font></p>
+                                    <p>更新：<font class="f1 time">1494493793</font></p>
+                                </div>
+                            </div>
+                        </li>                    <li>
+                            <div class="clearfix search-item">
+                              <em>字幕</em>
+                                <div class="fl-info">
+                                    <div class="t f14"><a href="/subtitle/52373"><strong class="list_title">[美剧字幕]《冰血暴  第三季第三集》(Fargo S03E03)</strong>[简体/繁体/英文/中英][ZiMuZu原创翻译]</a></div>
+                                    <p>版本：<font class="f4">Fargo.S03E03.720p.HDTV.x264-AVS</font></p>                                    <p>发布：<font class="f4 time">1494167828</font></p>
+                                    <p>更新：<font class="f1 time">1494167828</font></p>
+                                </div>
+                            </div>
+                        </li>                    <li>
+                            <div class="clearfix search-item">
+                              <em>字幕</em>
+                                <div class="fl-info">
+                                    <div class="t f14"><a href="/subtitle/52325"><strong class="list_title">[美剧字幕]《冰血暴  第三季第二集》(Fargo S03E02)</strong>[简体/繁体/英文/中英][ZiMuZu原创翻译]</a></div>
+                                    <p>版本：<font class="f4">Fargo.S03E02.720p.HDTV.x264-FLEET</font></p>                                    <p>发布：<font class="f4 time">1493884876</font></p>
+                                    <p>更新：<font class="f1 time">1493884876</font></p>
+                                </div>
+                            </div>
+                        </li>                    <li>
+                            <div class="clearfix search-item">
+                              <em>字幕</em>
+                                <div class="fl-info">
+                                    <div class="t f14"><a href="/subtitle/52248"><strong class="list_title">[美剧字幕]《冰血暴  第三季第一集》(Fargo S03E01)</strong>[简体/繁体/英文/中英][ZiMuZu原创翻译]</a></div>
+                                    <p>版本：<font class="f4">Fargo.S03E01.PROPER.720p.HDTV.x264-SVA</font></p>                                    <p>发布：<font class="f4 time">1493263981</font></p>
+                                    <p>更新：<font class="f1 time">1493263981</font></p>
+                                </div>
+                            </div>
+                        </li>                    <li>
+                            <div class="clearfix search-item">
+                              <em>字幕</em>
+                                <div class="fl-info">
+                                    <div class="t f14"><a href="/subtitle/48708"><strong class="list_title">[美剧字幕]《冰血暴 第二季精校合集》(Fargo S02)</strong>[简体/繁体/英文/中英][]</a></div>
+                                    <p>版本：<font class="f4">Fargo.S02.720p.WEB-DL</font></p>                                    <p>发布：<font class="f4 time">1464610833</font></p>
+                                    <p>更新：<font class="f1 time">1464610833</font></p>
+                                </div>
+                            </div>
+                        </li>                    <li>
+                            <div class="clearfix search-item">
+                              <em>字幕</em>
+                                <div class="fl-info">
+                                    <div class="t f14"><a href="/subtitle/46897"><strong class="list_title">[美剧字幕]《冰血暴  第二季第十集【WEB精校版】》(Fargo S02E10)</strong>[简体/繁体/英文/中英][]</a></div>
+                                    <p>版本：<font class="f4">Fargo.S02E10.Palindrome.720p.WEB-DL.DD5.1.H264-DRACULA</font></p>                                    <p>发布：<font class="f4 time">1450684201</font></p>
+                                    <p>更新：<font class="f1 time">1450684201</font></p>
+                                </div>
+                            </div>
+                        </li>                    <li>
+                            <div class="clearfix search-item">
+                              <em>字幕</em>
+                                <div class="fl-info">
+                                    <div class="t f14"><a href="/subtitle/46896"><strong class="list_title">[美剧字幕]《冰血暴  第二季第九集【WEB精校版】》(Fargo S02E09)</strong>[简体/繁体/英文/中英][]</a></div>
+                                    <p>版本：<font class="f4">Fargo.S02E09.Castle.720p.WEB-DL.DD5.1.H264-DRACULA</font></p>                                    <p>发布：<font class="f4 time">1450676741</font></p>
+                                    <p>更新：<font class="f1 time">1450676741</font></p>
+                                </div>
+                            </div>
+                        </li>                    <li>
+                            <div class="clearfix search-item">
+                              <em>字幕</em>
+                                <div class="fl-info">
+                                    <div class="t f14"><a href="/subtitle/46895"><strong class="list_title">[美剧字幕]《冰血暴  第二季第八集【WEB精校版】》(Fargo S02E08)</strong>[简体/繁体/英文/中英][]</a></div>
+                                    <p>版本：<font class="f4">Fargo.S02E08.720p.WEB-DL.DD5.1.H264-RARBG</font></p>                                    <p>发布：<font class="f4 time">1450676594</font></p>
+                                    <p>更新：<font class="f1 time">1450676594</font></p>
+                                </div>
+                            </div>
+                        </li>                    <li>
+                            <div class="clearfix search-item">
+                              <em>字幕</em>
+                                <div class="fl-info">
+                                    <div class="t f14"><a href="/subtitle/46831"><strong class="list_title">[美剧字幕]《冰血暴  第二季第十集[本季终]》(Fargo S02E10)</strong>[简体/繁体/英文/中英][]</a></div>
+                                    <p>版本：<font class="f4">Fargo.S02E10.720p.HDTV.x264-0SEC</font></p>                                    <p>发布：<font class="f4 time">1450178655</font></p>
+                                    <p>更新：<font class="f1 time">1450178655</font></p>
+                                </div>
+                            </div>
+                        </li>                    <li>
+                            <div class="clearfix search-item">
+                              <em>字幕</em>
+                                <div class="fl-info">
+                                    <div class="t f14"><a href="/subtitle/46770"><strong class="list_title">[美剧字幕]《《冰血暴》  第二季第九集》(Fargo  S02E09)</strong>[简体/繁体/英文/中英][]</a></div>
+                                    <p>版本：<font class="f4">Fargo.S02E09.720p.HDTV.x264-FLEET</font></p>                                    <p>发布：<font class="f4 time">1449575136</font></p>
+                                    <p>更新：<font class="f1 time">1449575136</font></p>
+                                </div>
+                            </div>
+                        </li>                    <li>
+                            <div class="clearfix search-item">
+                              <em>字幕</em>
+                                <div class="fl-info">
+                                    <div class="t f14"><a href="/subtitle/46699"><strong class="list_title">[美剧字幕]《冰血暴  第二季第八集》(Fargo S02E08)</strong>[简体/繁体/英文/中英][]</a></div>
+                                    <p>版本：<font class="f4">Fargo.S02E08.720p.HDTV.x264-FLEET</font></p>                                    <p>发布：<font class="f4 time">1448962884</font></p>
+                                    <p>更新：<font class="f1 time">1448962924</font></p>
+                                </div>
+                            </div>
+                        </li>                    <li>
+                            <div class="clearfix search-item">
+                              <em>字幕</em>
+                                <div class="fl-info">
+                                    <div class="t f14"><a href="/subtitle/46690"><strong class="list_title">[美剧字幕]《冰血暴  第二季第七集【WEB精校版】》(Fargo S02E07)</strong>[简体/繁体/英文/中英][]</a></div>
+                                    <p>版本：<font class="f4">Fargo.S02E07.Did.You.Do.This.No.You.Did.It.720p.NF.WEBRip.DD5.1.x264-NTb</font></p>                                    <p>发布：<font class="f4 time">1448942427</font></p>
+                                    <p>更新：<font class="f1 time">1448942427</font></p>
+                                </div>
+                            </div>
+                        </li>                    <li>
+                            <div class="clearfix search-item">
+                              <em>字幕</em>
+                                <div class="fl-info">
+                                    <div class="t f14"><a href="/subtitle/46689"><strong class="list_title">[美剧字幕]《冰血暴  第二季第六集【WEB精校版】》(Fargo S02E06)</strong>[简体/繁体/英文/中英][]</a></div>
+                                    <p>版本：<font class="f4">Fargo.S02E06.Rhinoceros.720p.NF.WEBRip.DD5.1.x264-NTb</font></p>                                    <p>发布：<font class="f4 time">1448941231</font></p>
+                                    <p>更新：<font class="f1 time">1448941231</font></p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pages pages-padding"><div>&nbsp;<b><a class='cur' >1<span></span></a><a href='/search/index/?page=2&keyword=%E5%86%B0%E8%A1%80%E6%9A%B4&type='>2<span></span></a><a href='/search/index/?page=3&keyword=%E5%86%B0%E8%A1%80%E6%9A%B4&type='>3<span></span></a><a href='/search/index/?page=4&keyword=%E5%86%B0%E8%A1%80%E6%9A%B4&type='>4<span></span></a></b>&nbsp;<a href='/search/index/?page=2&keyword=%E5%86%B0%E8%A1%80%E6%9A%B4&type='>下一页<span></span></a>&nbsp;<a href='/search/index/?page=4&keyword=%E5%86%B0%E8%A1%80%E6%9A%B4&type='>...4<span></span></a></div></div>
+            </div>
+        </div>
+        <div class="area-right">
+          <div style="text-align:center;">
+<script type="text/javascript">
+//if(is_ga_a()) document.write('<script src="http://g.ousns.net/ga-300.js?321" type="text/javascript"><\/script>');
+</script>
+</div>
+
+
+          <!--
+<div style="margin:10px 0 0;text-align:center;">
+<style>
+.room {margin:0px auto;padding:0px;height:1030px;width:300px;font-size:12px;background-color:#fff; }
+.room li {list-style:none;width:130px;height:150px;padding:10px 10px;text-align: center;float:left;border:none;}
+.room li img{width:130px;height:96px;}
+.room li p{line-height: 21px;height: 21px;width:130px;overflow: hidden;}
+.room li span{display: block;}
+.room li span.room_l{float:left;}
+.room li span.room_r{float: right;}
+</style>
+<ul class="room"></ul>
+<script type="text/javascript">
+$.getJSON('http://v.6.cn/coop/pub/getRand.php?num=12&callback=?',function(result){
+  var html = '';
+  for(var i=0;i<result.length;i++){
+    var room_url = 'http://v.6.cn/'+result[i].rid+'/?src=yyetst';
+    html += '<li><a href="'+room_url+'" target="_blank" rel="nofollow"><img src="'+result[i].pospic+'" /></a><p><a href="'+room_url+'" target="_blank" rel="nofollow">'+result[i].username+'</a></p> <p><span class="room_l">开播</span><span class="room_r">'+result[i].starttime+'</span></p> <p><span class="room_l">房间人数</span><span class="room_r">'+result[i].count+'</span></p> </li>';
+  }
+  $('ul.room').html(html);
+});
+</script>
+</div>
+-->
+<script  type="text/javascript">
+//tb-300
+document.write('<a style="display:none!important" id="tanx-a-mm_111117185_10092486_33630706"></a>');
+tanx_s = document.createElement("script");
+tanx_s.type = "text/javascript";
+tanx_s.charset = "gbk";
+tanx_s.id = "tanx-s-mm_111117185_10092486_33630706";
+tanx_s.async = true;
+tanx_s.src = "http://p.tanx.com/ex?i=mm_111117185_10092486_33630706";
+tanx_h = document.getElementsByTagName("head")[0];
+if(tanx_h)tanx_h.insertBefore(tanx_s,tanx_h.firstChild);
+//tb-300-2
+document.write('<a style="display:none!important" id="tanx-a-mm_111117185_10092486_33638558"></a>');
+tanx_s = document.createElement("script");
+tanx_s.type = "text/javascript";
+tanx_s.charset = "gbk";
+tanx_s.id = "tanx-s-mm_111117185_10092486_33638558";
+tanx_s.async = true;
+tanx_s.src = "http://p.tanx.com/ex?i=mm_111117185_10092486_33638558";
+tanx_h = document.getElementsByTagName("head")[0];
+if(tanx_h)tanx_h.insertBefore(tanx_s,tanx_h.firstChild);
+//tb-300-3
+document.write('<a style="display:none!important" id="tanx-a-mm_111117185_10092486_33638560"></a>');
+tanx_s = document.createElement("script");
+tanx_s.type = "text/javascript";
+tanx_s.charset = "gbk";
+tanx_s.id = "tanx-s-mm_111117185_10092486_33638560";
+tanx_s.async = true;
+tanx_s.src = "http://p.tanx.com/ex?i=mm_111117185_10092486_33638560";
+tanx_h = document.getElementsByTagName("head")[0];
+if(tanx_h)tanx_h.insertBefore(tanx_s,tanx_h.firstChild);
+</script>
+
+
+            <!-- <div class="box subtitle-serch-sidebar">
+                <h2 class="it">熱門關搜索鍵詞</h2>
+                <ul>
+                  <li><a href="/search?keyword=异形">异形</a></li><li><a href="/search?keyword=纸牌屋">纸牌屋</a></li><li><a href="/search?keyword=深夜食堂">深夜食堂</a></li><li><a href="/search?keyword=生活大爆炸">生活大爆炸</a></li><li><a href="/search?keyword=越狱">越狱</a></li><li><a href="/search?keyword=权力的游戏">权力的游戏</a></li><li><a href="/search?keyword=普罗米修斯">普罗米修斯</a></li><li><a href="/search?keyword=女子监狱">女子监狱</a></li><li><a href="/search?keyword=硅谷">硅谷</a></li><li><a href="/search?keyword=始祖家族">始祖家族</a></li><li><a href="/search?keyword=冰血暴">冰血暴</a></li><li><a href="/search?keyword=行尸走肉">行尸走肉</a></li><li><a href="/search?keyword=绝命律师">绝命律师</a></li><li><a href="/search?keyword=神秘博士">神秘博士</a></li><li><a href="/search?keyword=美国众神">美国众神</a></li><li><a href="/search?keyword=小巨人">小巨人</a></li>                </ul>
+            </div> -->
+
+            <div style="text-align:center; margin-top:10px;">
+<script type="text/javascript">
+//if(is_ga_a()) document.write('<script src="http://g.ousns.net/ga-300-2.js?546" type="text/javascript"><\/script>');
+</script>
+</div>
+
+        </div>
+        <div class="clearfix"></div>
+  </div>
+</div>
+<script type="text/javascript">
+var keyword = '冰血暴';
+var query_string = 'keyword=%E5%86%B0%E8%A1%80%E6%9A%B4&type=';
+var regx = new RegExp(keyword,'gi');
+var url = GLOBAL.CONST.WWW_URL+'search';
+
+var build_param = function(key,value){
+  match = false;
+  regx = new RegExp(key+'=','gi');
+  params = query_string.split('&');
+  for(i=0;i<params.length;i++){
+    if(params[i].match(regx)!=null){
+      params[i] = key+'='+value;
+      match = true;
+    }
+  }
+  if(match==false) params[i] = key+'='+value;
+  return params.join('&');
+};
+
+$('.list_title').each(function(){ //列表中的关键字标红
+  _text = $(this).text();
+  _text = _text.replace(regx,'<font color="red">'+keyword+'</font>');
+  $(this).html(_text);
+});
+$('.time').each(function(){ //格式化列表中的UNIX时间戳
+  _time = GLOBAL.Util.formatDate($(this).text());
+  $(this).text(_time);
+});
+$('input[name=keyword]').val(keyword).css('color','#000'); //填充搜索框
+
+$('.search_type').each(function(){  //搜索类型状态
+  type = $(this).attr('type');
+  if(GLOBAL.Util.getParam('type',query_string)==type){
+    $(this).addClass('selected');
+    $('a.search_type[type='+type+']').addClass('selected').siblings().removeClass('selected');
+    $('input#type').val(type);
+  }else{
+    $(this).attr('href',url+'?'+build_param('type',type));
+  }
+});
+</script>
+<div style="text-align:center;margin-top:15px">
+<script type="text/javascript">
+if(typeof(is_ga_a)!='undefined' && is_ga_a()){
+    //tb-ssp-950x90
+    document.write('<script charset="gbk" src="http://p.tanx.com/ex?i=mm_111117185_10092486_42796389"><\/script>');
+}
+</script>
+</div>
+
+<script src="http://g.ousns.net/ad-footer.js?27211" type="text/javascript"></script>
+
+<div class="lx167" style="width:1038px;margin:10px auto;background-color:#fff"></div>
+<script>
+GLOBAL.JQUERY.LazyLoad($('div.lx167'),function(){
+  $('div.lx167').html('<iframe src="http://www.lx167.com/index/promo_iframe" width="1038" height="147" frameborder="0"></iframe>');
+});
+</script>
+
+<div class="footer">
+  <p class="tc" style="font-size:12px;"><a href="http://allyingshi.com/fanyi/index.html" target="_blank">商业翻译洽谈</a>  <a href="http://www.zimuzu.tv/announcement/63">联系我们</a>   <a href="/Announcement">加入字幕组</a>  <a href="http://app.zimuzu.tv/" target="_blank">APP手机客户端</a>  <a href="http://www.zimuzu.tv/bbs/list?fid=413">意见反馈</a>   <a href="http://www.zimuzu.tv/announcement/65">账号异常申诉</a>   <a href="http://www.zimuzu.tv/announcement/67">申请本站公共API接口</a>   <div style="width:1px;overflow: hidden;height:1px;"><script src="http://s95.cnzz.com/z_stat.php?id=1254180690&web_id=1254180690" language="JavaScript"></script></div></p>
+  <p class="tc" style="font-size:14px;"><img src="http://tu.zmzjstu.com/images/dibulogo.png">&nbsp;YYeTs人人影视 2006-2017 ©神盾信息有限公司 (香港) Shield Technologies Limited</p>
+</div>
+<style>
+.WB_follow_ex, .WB_follow_ex .follow_btn_line{margin:0 auto !important;}
+</style>
+<script>eval(xianliao);</script>
+<script type='text/javascript' charset='UTF-8' src='https://www.xianliao.me/embed.js'></script>
+</body>
+</html>
